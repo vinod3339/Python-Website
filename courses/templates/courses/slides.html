@@ -1,0 +1,32 @@
+{% extends "courses/base.html" %}
+{% load static %}
+
+{% block content %}
+  <section class="container py-5">
+    <h2 class="h3 mb-3">Lecture Slides</h2>
+    <p class="text-secondary mb-4">
+      Put your PDF files in <code>static/slides</code> using the same names listed below.
+    </p>
+    <div class="row g-3">
+      {% for slide in slides %}
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 card-title">{{ slide.week }}</h3>
+              <p class="card-text text-secondary flex-grow-1">{{ slide.topic }}</p>
+              <a
+                href="{% static 'slides/'|add:slide.file %}"
+                class="btn btn-outline-primary btn-sm d-inline-flex align-items-center gap-2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i class="bi bi-download" aria-hidden="true"></i>
+                Open {{ slide.file }}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
