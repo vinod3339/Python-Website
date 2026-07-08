@@ -1,0 +1,296 @@
+:root {
+  --stanford-cardinal: #8c1515;
+  --stanford-cardinal-dark: #6e0f0f;
+  --stanford-cool-grey: #53565a;
+  --stanford-warm-grey: #f4f4f4;
+  --stanford-black: #2e2d29;
+  --stanford-link: #006cb8;
+  --lecture-bg: #e8f4fd;
+  --assignment-bg: #fff3e0;
+  --deadline-bg: #fce4ec;
+  --event-bg: #e8f5e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  color: var(--stanford-black);
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+}
+
+a {
+  color: var(--stanford-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.course-navbar {
+  background-color: var(--stanford-cardinal);
+  border-bottom: 3px solid var(--stanford-cardinal-dark);
+}
+
+.course-navbar .navbar-brand {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff !important;
+}
+
+.course-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.course-navbar .nav-link:hover,
+.course-navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Hero */
+.course-hero {
+  background: linear-gradient(135deg, var(--stanford-cardinal) 0%, var(--stanford-cardinal-dark) 100%);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.course-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-hero .term-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Content sections */
+.content-section {
+  padding: 2.5rem 0;
+}
+
+.content-section:nth-child(even) {
+  background-color: var(--stanford-warm-grey);
+}
+
+.section-title {
+  color: var(--stanford-cardinal);
+  border-bottom: 2px solid var(--stanford-cardinal);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Staff cards */
+.staff-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: #fff;
+  height: 100%;
+}
+
+.staff-card .role {
+  color: var(--stanford-cool-grey);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Schedule table */
+.schedule-table {
+  font-size: 0.9rem;
+}
+
+.schedule-table thead th {
+  background-color: var(--stanford-cardinal);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem;
+}
+
+.schedule-table tbody td {
+  vertical-align: top;
+  padding: 0.75rem;
+  border-color: #dee2e6;
+}
+
+.schedule-table .week-header td {
+  background-color: var(--stanford-warm-grey);
+  font-weight: 700;
+  color: var(--stanford-cardinal);
+  font-size: 1rem;
+}
+
+.schedule-table .category-header td {
+  background-color: #e9ecef;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--stanford-cool-grey);
+}
+
+.material-link {
+  display: inline-block;
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  padding: 0.15rem 0.5rem;
+  background: var(--lecture-bg);
+  border-radius: 4px;
+  font-size: 0.82rem;
+  color: var(--stanford-link);
+  text-decoration: none;
+}
+
+.material-link:hover {
+  background: #cce5ff;
+  text-decoration: none;
+}
+
+.material-link.assignment {
+  background: var(--assignment-bg);
+}
+
+.material-link.assignment:hover {
+  background: #ffe0b2;
+}
+
+.deadline-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: var(--deadline-bg);
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #c62828;
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: var(--event-bg);
+  border-radius: 4px;
+  font-size: 0.82rem;
+  color: #2e7d32;
+}
+
+/* Assignment cards */
+.assignment-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.assignment-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.assignment-card .pa-number {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--stanford-cardinal);
+}
+
+.assignment-card .due-date {
+  font-weight: 600;
+  color: #c62828;
+}
+
+/* Slide cards */
+.slide-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.slide-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.slide-card .slide-header {
+  background: var(--stanford-cardinal);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.slide-card .slide-body {
+  padding: 1rem;
+}
+
+/* Info sidebar */
+.info-sidebar {
+  background: var(--stanford-warm-grey);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.info-sidebar h5 {
+  color: var(--stanford-cardinal);
+  margin-bottom: 1rem;
+}
+
+.info-sidebar ul {
+  padding-left: 1.25rem;
+}
+
+.info-sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.course-footer {
+  background-color: var(--stanford-black);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.course-footer a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Blockquote */
+.course-quote {
+  border-left: 4px solid var(--stanford-cardinal);
+  padding: 1rem 1.5rem;
+  background: var(--stanford-warm-grey);
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .course-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .schedule-table {
+    font-size: 0.8rem;
+  }
+}
