@@ -41,13 +41,7 @@ export default function CourseInfo() {
                   ))}
                 </tbody>
               </Table>
-
-              <h2 className="section-title">Policies</h2>
-              <ul>
-                {courseInfo.policies.map((p) => (
-                  <li key={p} className="mb-2">{p}</li>
-                ))}
-              </ul>
+              
             </Col>
 
             <Col lg={4}>

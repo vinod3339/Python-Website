@@ -6,15 +6,24 @@ function MaterialLinks({ materials }) {
   if (!materials?.length) return null
   return (
     <>
-      {materials.map((m) => (
-        <a
-          key={m.label}
-          href={m.url}
-          className={`material-link${m.type === 'colab' ? ' assignment' : ''}`}
-        >
-          [{m.label}]
-        </a>
-      ))}
+      {materials.map((m) => {
+        const isDownloadable = m.download || m.type === 'ppt'
+        return (
+          <a
+            key={m.label}
+            href={m.url}
+            className={`material-link${m.type === 'colab' ? ' assignment' : ''}`}
+            {...(isDownloadable && m.url !== '#'
+              ? { download: m.download || `${m.label}.pptx` }
+              : {})}
+          >
+            [{m.label}]
+            {isDownloadable && m.url !== '#' && (
+              <i className="bi bi-download ms-1" title="Download" />
+            )}
+          </a>
+        )
+      })}
     </>
   )
 }

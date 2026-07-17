@@ -2,8 +2,11 @@
   "name": "course-portal",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://vinod3339.github.io/Python-Website",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

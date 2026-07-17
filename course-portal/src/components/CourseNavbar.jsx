@@ -5,7 +5,7 @@ import { courseInfo } from '../data/courseData'
 const navItems = [
   { to: '/', label: 'Home', end: true },
   { to: '/schedule', label: 'Schedule' },
-  { to: '/slides', label: 'Lecture Slides' },
+  /*{ to: '/slides', label: 'Lecture Slides' },*/
   { to: '/assignments', label: 'Assignments' },
   { to: '/info', label: 'Course Info' },
 ]

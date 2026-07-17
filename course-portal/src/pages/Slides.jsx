@@ -43,20 +43,34 @@ export default function Slides() {
                           <div className="mb-2">
                             <strong className="text-muted small">Slides:</strong>
                             <div className="mt-1">
-                              {lecture.slides.map((s) => (
-                                <a key={s.label} href={s.url} className="material-link">
-                                  <i
-                                    className={`bi bi-${
-                                      s.format === 'pdf'
-                                        ? 'file-pdf'
-                                        : s.format === 'colab'
-                                          ? 'cloud'
-                                          : 'file-slides'
-                                    } me-1`}
-                                  />
-                                  {s.label}
-                                </a>
-                              ))}
+                              {lecture.slides.map((s) => {
+                                const isDownloadable =
+                                  s.download || s.format === 'pptx' || s.format === 'pdf'
+                                return (
+                                  <a
+                                    key={s.label}
+                                    href={s.url}
+                                    className="material-link"
+                                    {...(isDownloadable && s.url !== '#'
+                                      ? { download: s.download || s.label }
+                                      : {})}
+                                  >
+                                    <i
+                                      className={`bi bi-${
+                                        s.format === 'pdf'
+                                          ? 'file-pdf'
+                                          : s.format === 'colab'
+                                            ? 'cloud'
+                                            : 'file-slides'
+                                      } me-1`}
+                                    />
+                                    {s.label}
+                                    {isDownloadable && s.url !== '#' && (
+                                      <i className="bi bi-download ms-1" title="Download" />
+                                    )}
+                                  </a>
+                                )
+                              })}
                             </div>
                           </div>
                           {lecture.notes.length > 0 && (

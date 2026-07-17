@@ -1,3 +1,13 @@
+const baseUrl = import.meta.env.BASE_URL
+
+export const materials = {
+  thinkLikeProgrammer: {
+    label: 'Think Like a Programmer',
+    filename: 'think-like-a-programmer.pptx',
+    url: `${baseUrl}materials/think-like-a-programmer.pptx`,
+  },
+}
+
 export const courseInfo = {
   code: '23CS301',
   title: 'Problem Solving using Python',
@@ -45,17 +55,29 @@ export const schedule = [
     week: 1,
     entries: [
       {
-        date: 'Tue Jan 6',
+        date: 'Thu Jan 16',
         description: 'Course Introduction & Python Setup [intro slides]',
         materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'setup guide', type: 'doc', url: '#' },
+          {
+            label: 'slides',
+            type: 'ppt',
+            url: materials.thinkLikeProgrammer.url,
+            download: materials.thinkLikeProgrammer.filename,
+          },
+          {
+            description : 'C and Python',
+            label : 'slides',
+            type: 'ppt',
+            url: materials.C-and-Python.url,
+            download: materials.C-and-Python.filename,
+          }
+          
         ],
         events: [],
         deadlines: [],
       },
       {
-        date: 'Thu Jan 8',
+        date: 'Thu Jan 23',
         description: 'Variables, Data Types & Basic Operations',
         materials: [
           { label: 'slides', type: 'slides', url: '#' },
@@ -75,198 +97,7 @@ export const schedule = [
       },
     ],
   },
-  {
-    week: 2,
-    category: 'Control Flow & Functions',
-    entries: [
-      {
-        date: 'Tue Jan 13',
-        description: 'Conditionals, Loops & Iteration',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'notes', type: 'notes', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 1 out', type: 'release' }],
-      },
-      {
-        date: 'Thu Jan 15',
-        description: 'Functions & Scope',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'notes', type: 'notes', url: '#' },
-        ],
-        events: [],
-        deadlines: [],
-      },
-    ],
-  },
-  {
-    week: 3,
-    entries: [
-      {
-        date: 'Tue Jan 20',
-        description: 'Lists, Tuples & Dictionaries',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'notes', type: 'notes', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 1 due', type: 'assignment' }],
-      },
-      {
-        date: 'Thu Jan 22',
-        description: 'Strings & File I/O',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 2 out', type: 'release' }],
-      },
-    ],
-  },
-  {
-    week: 4,
-    category: 'Object-Oriented Programming',
-    entries: [
-      {
-        date: 'Tue Jan 27',
-        description: 'Classes & Objects',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'notes', type: 'notes', url: '#' },
-        ],
-        events: [],
-        deadlines: [],
-      },
-      {
-        date: 'Thu Jan 29',
-        description: 'Inheritance & Polymorphism',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 2 due', type: 'assignment' }],
-      },
-      {
-        date: 'Fri Jan 30',
-        description: 'OOP Review Session',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'colab', type: 'colab', url: '#' },
-        ],
-        events: [{ label: '1:30–2:50 PM, NVIDIA Auditorium', type: 'session' }],
-        deadlines: [{ label: 'PA 3 out', type: 'release' }],
-      },
-    ],
-  },
-  {
-    week: 5,
-    entries: [
-      {
-        date: 'Tue Feb 3',
-        description: 'Error Handling & Testing',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-        ],
-        events: [],
-        deadlines: [],
-      },
-      {
-        date: 'Thu Feb 5',
-        description: 'Modules & Packages',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'notes', type: 'notes', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'Midterm Review', type: 'event' }],
-      },
-    ],
-  },
-  {
-    week: 6,
-    category: 'Data Science & Libraries',
-    entries: [
-      {
-        date: 'Tue Feb 10',
-        description: 'NumPy & Array Operations',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'colab', type: 'colab', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 3 due', type: 'assignment' }],
-      },
-      {
-        date: 'Thu Feb 12',
-        description: 'Pandas & Data Analysis',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'Midterm Exam', type: 'exam' }],
-      },
-    ],
-  },
-  {
-    week: 7,
-    entries: [
-      {
-        date: 'Tue Feb 17',
-        description: 'Data Visualization with Matplotlib',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'notes', type: 'notes', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 4 out', type: 'release' }],
-      },
-      {
-        date: 'Thu Feb 19',
-        description: 'Working with APIs & JSON',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-        ],
-        events: [],
-        deadlines: [],
-      },
-    ],
-  },
-  {
-    week: 8,
-    category: 'Final Project',
-    entries: [
-      {
-        date: 'Tue Feb 24',
-        description: 'Web Basics with Flask',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 4 due', type: 'assignment' }],
-      },
-      {
-        date: 'Thu Feb 26',
-        description: 'Final Project Overview & Guidelines',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'handout', type: 'doc', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'Project Proposal due', type: 'assignment' }],
-      },
-      {
-        date: 'Fri Feb 27',
-        description: 'Final Project Workshop',
-        materials: [
-          { label: 'colab', type: 'colab', url: '#' },
-        ],
-        events: [{ label: '1:30–2:50 PM, NVIDIA Auditorium', type: 'session' }],
-        deadlines: [],
-      },
-    ],
-  },
+    
 ]
 
 export const assignments = [
