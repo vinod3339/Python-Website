@@ -6,6 +6,11 @@ export const materials = {
     filename: 'think-like-a-programmer.pptx',
     url: `${baseUrl}materials/think-like-a-programmer.pptx`,
   },
+  CandPython: {
+    label: 'C and Python',
+    filename: 'c-and-python.pptx',
+    url: `${baseUrl}materials/c-and-python.pptx`,
+  },
 }
 
 export const courseInfo = {
@@ -53,51 +58,42 @@ export const courseInfo = {
 export const schedule = [
   {
     week: 1,
-    entries: [
+    date: 'Tue Jul 16',
+    description: 'Think Like a Programmer',
+    materials: [
       {
-        date: 'Thu Jan 16',
-        description: 'Course Introduction & Python Setup [intro slides]',
-        materials: [
-          {
-            label: 'slides',
-            type: 'ppt',
-            url: materials.thinkLikeProgrammer.url,
-            download: materials.thinkLikeProgrammer.filename,
-          },
-          {
-            description : 'C and Python',
-            label : 'slides',
-            type: 'ppt',
-            url: materials.C-and-Python.url,
-            download: materials.C-and-Python.filename,
-          }
-          
-        ],
-        events: [],
-        deadlines: [],
-      },
-      {
-        date: 'Thu Jan 23',
-        description: 'Variables, Data Types & Basic Operations',
-        materials: [
-          { label: 'slides', type: 'slides', url: '#' },
-          { label: 'notes', type: 'notes', url: '#' },
-        ],
-        events: [],
-        deadlines: [{ label: 'PA 0 due', type: 'assignment' }],
-      },
-      {
-        date: 'Fri Jan 9',
-        description: 'Python Environment Review Session',
-        materials: [
-          { label: 'colab', type: 'colab', url: '#' },
-        ],
-        events: [{ label: '1:30–2:50 PM, NVIDIA Auditorium', type: 'session' }],
-        deadlines: [],
+        label: 'slides',
+        type: 'ppt',
+        url: materials.thinkLikeProgrammer.url,
+        download: materials.thinkLikeProgrammer.filename,
       },
     ],
+    events: [],
+    deadlines: [],
   },
-    
+  {
+    date: 'Thu Jan 23',
+    description: 'C and Python',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.CandPython.url,
+        download: materials.CandPython.filename,
+      },
+    ],
+    events: [],
+    deadlines: [{ label: 'PA 0 due', type: 'assignment' }],
+  },
+  {
+    date: 'Fri Jan 9',
+    description: 'Python Environment Review Session',
+    materials: [
+      { label: 'colab', type: 'colab', url: '#' },
+    ],
+    events: [{ label: '1:30–2:50 PM, NVIDIA Auditorium', type: 'session' }],
+    deadlines: [],
+  },
 ]
 
 export const assignments = [

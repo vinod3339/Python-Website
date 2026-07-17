@@ -69,33 +69,53 @@ export default function ScheduleTable() {
           </tr>
         </thead>
         <tbody>
-          {schedule.map((week) => (
-            <Fragment key={`week-${week.week}`}>
-              <tr className="week-header">
-                <td colSpan={5}>Week {week.week}</td>
+          {schedule.map((item, index) => {
+            if (item.entries) {
+              return (
+                <Fragment key={`week-${item.week ?? index}`}>
+                  <tr className="week-header">
+                    <td colSpan={5}>Week {item.week}</td>
+                  </tr>
+                  {item.category && (
+                    <tr key={`cat-${item.week ?? index}`} className="category-header">
+                      <td colSpan={5}>{item.category}</td>
+                    </tr>
+                  )}
+                  {item.entries.map((entry) => (
+                    <tr key={`${item.week}-${entry.date}`}>
+                      <td>{entry.date}</td>
+                      <td>{entry.description}</td>
+                      <td>
+                        <MaterialLinks materials={entry.materials} />
+                      </td>
+                      <td>
+                        <EventBadges events={entry.events} />
+                      </td>
+                      <td>
+                        <DeadlineBadges deadlines={entry.deadlines} />
+                      </td>
+                    </tr>
+                  ))}
+                </Fragment>
+              )
+            }
+
+            return (
+              <tr key={`entry-${index}-${item.date}`}>
+                <td>{item.date}</td>
+                <td>{item.description}</td>
+                <td>
+                  <MaterialLinks materials={item.materials} />
+                </td>
+                <td>
+                  <EventBadges events={item.events} />
+                </td>
+                <td>
+                  <DeadlineBadges deadlines={item.deadlines} />
+                </td>
               </tr>
-              {week.category && (
-                <tr key={`cat-${week.week}`} className="category-header">
-                  <td colSpan={5}>{week.category}</td>
-                </tr>
-              )}
-              {week.entries.map((entry) => (
-                <tr key={`${week.week}-${entry.date}`}>
-                  <td>{entry.date}</td>
-                  <td>{entry.description}</td>
-                  <td>
-                    <MaterialLinks materials={entry.materials} />
-                  </td>
-                  <td>
-                    <EventBadges events={entry.events} />
-                  </td>
-                  <td>
-                    <DeadlineBadges deadlines={entry.deadlines} />
-                  </td>
-                </tr>
-              ))}
-            </Fragment>
-          ))}
+            )
+          })}
         </tbody>
       </Table>
     </div>
