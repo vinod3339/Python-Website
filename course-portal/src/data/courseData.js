@@ -11,6 +11,11 @@ export const materials = {
     filename: 'c-and-python.pptx',
     url: `${baseUrl}materials/c-and-python.pptx`,
   },
+  pythonLabTaskGitHubVSCode: {
+    label: 'Python Lab Task: Git, GitHub & VS Code',
+    filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
+    url: `${baseUrl}materials/Python_Lab_Task_Git_GitHub_VSCode.pdf`,
+  },
 }
 
 export const courseInfo = {
@@ -108,7 +113,11 @@ export const assignments = [
       'Install Python, set up your development environment, and write your first program. Submit a screenshot of your terminal running a "Hello, World!" script.',
     resources: [
       { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Setup Guide', url: '#', icon: 'book' },
+      { label: 'Setup Guide', 
+        type: 'pdf',
+        url: materials.pythonLabTaskGitHubVSCode.url,
+        download: materials.pythonLabTaskGitHubVSCode.filename,
+        icon: 'file-pdf' },
     ],
     topics: ['Python installation', 'IDE setup', 'Basic syntax'],
   },
