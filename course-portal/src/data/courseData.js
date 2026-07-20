@@ -18,6 +18,11 @@ export const materials = {
   },
 }
 
+export const scheduleSpreadsheet = {
+  label: 'Course Schedule (Excel)',
+  url: 'https://gmredu-my.sharepoint.com/:x:/g/personal/vinodkumar_s_gmrit_edu_in/IQCAalG9fUImRKdqNK8OHBzaAecux0GFH-5AEyljcpaskjY?e=k8Z9C9',
+}
+
 export const courseInfo = {
   code: '23CS301',
   title: 'Problem Solving using Python',

@@ -1,13 +1,15 @@
 import { Fragment } from 'react'
 import { Table } from 'react-bootstrap'
-import { schedule } from '../data/courseData'
+import { schedule, scheduleSpreadsheet } from '../data/courseData'
 
 function MaterialLinks({ materials }) {
   if (!materials?.length) return null
   return (
     <>
       {materials.map((m) => {
-        const isDownloadable = m.download || m.type === 'ppt'
+        const isExternal = m.url.startsWith('http')
+        const isDownloadable =
+          !isExternal && (m.download || m.type === 'ppt' || m.type === 'pdf')
         return (
           <a
             key={m.label}
@@ -16,8 +18,10 @@ function MaterialLinks({ materials }) {
             {...(isDownloadable && m.url !== '#'
               ? { download: m.download || `${m.label}.pptx` }
               : {})}
+            {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           >
             [{m.label}]
+            {m.type === 'excel' && <i className="bi bi-file-earmark-excel ms-1" title="Excel" />}
             {isDownloadable && m.url !== '#' && (
               <i className="bi bi-download ms-1" title="Download" />
             )}
@@ -69,6 +73,19 @@ export default function ScheduleTable() {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td colSpan={5}>
+              <a
+                href={scheduleSpreadsheet.url}
+                className="material-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-file-earmark-excel me-1" />
+                [{scheduleSpreadsheet.label}]
+              </a>
+            </td>
+          </tr>
           {schedule.map((item, index) => {
             if (item.entries) {
               return (
