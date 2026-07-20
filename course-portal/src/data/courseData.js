@@ -111,8 +111,8 @@ export const assignments = [
     id: 'pa0',
     number: 0,
     title: 'Environment Setup & Hello World',
-    dueDate: 'Thu Jan 8, 5:00 PM',
-    released: 'Tue Jan 6',
+    dueDate: 'Thu Jul 22, 5:00 PM',
+    released: 'Tue Jul 14',
     points: 10,
     description:
       'Install Python, set up your development environment, and write your first program. Submit a screenshot of your terminal running a "Hello, World!" script.',
