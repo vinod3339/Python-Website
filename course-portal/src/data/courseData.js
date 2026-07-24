@@ -16,6 +16,11 @@ export const materials = {
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
     url: `${baseUrl}materials/Python_Lab_Task_Git_GitHub_VSCode.pdf`,
   },
+  week1LabTask: {
+    label: 'Week - 1 Lab Task',
+    filename: 'Week - 1 Lab Task.pdf',
+    url: `${baseUrl}materials/Week - 1 Lab Task.pdf`,
+  },
 }
 
 export const scheduleSpreadsheet = {
@@ -129,17 +134,21 @@ export const assignments = [
   {
     id: 'pa1',
     number: 1,
-    title: 'Control Flow & Functions',
-    dueDate: 'Tue Jan 20, 5:00 PM',
-    released: 'Tue Jan 13',
-    points: 100,
+    title: 'Fundamentals of Python',
+    dueDate: 'Tue Jul 28, 12:00 PM',
+    released: 'Tue Jan 24',
+    points: 70,
     description:
-      'Implement a number guessing game and a function library for common mathematical operations. Practice using conditionals, loops, and writing reusable functions.',
+      'Python Fundametals',
     resources: [
       { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Handout (PDF)', url: '#', icon: 'file-pdf' },
+      { label: 'Week 1 Lab Task (PDF)', 
+        type: 'pdf',
+        url: materials.week1LabTask.url,
+        download: materials.week1LabTask.filename,
+        icon: 'file-pdf' },
     ],
-    topics: ['if/else', 'for/while loops', 'functions', 'scope'],
+    topics: ['Identifiers', 'statements', 'variables', 'keywords',  'input/output', 'command line arguments'],
   },
   {
     id: 'pa2',
