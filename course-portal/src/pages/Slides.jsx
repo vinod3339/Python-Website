@@ -30,12 +30,7 @@ export default function Slides() {
                         <div className="slide-header">
                           <div className="d-flex justify-content-between align-items-center">
                             <span>{lecture.date}</span>
-                            {lecture.video && (
-                              <a href={lecture.video} className="text-white">
-                                <i className="bi bi-play-circle me-1" />
-                                Video
-                              </a>
-                            )}
+                            
                           </div>
                         </div>
                         <div className="slide-body">
@@ -44,16 +39,15 @@ export default function Slides() {
                             <strong className="text-muted small">Slides:</strong>
                             <div className="mt-1">
                               {lecture.slides.map((s) => {
+                                const isValidUrl = s.url && s.url !== '#'
                                 const isDownloadable =
-                                  s.download || s.format === 'pptx' || s.format === 'pdf'
-                                return (
+                                  isValidUrl && (s.download || s.format === 'pptx' || s.format === 'pdf')
+                                return isValidUrl ? (
                                   <a
                                     key={s.label}
                                     href={s.url}
                                     className="material-link"
-                                    {...(isDownloadable && s.url !== '#'
-                                      ? { download: s.download || s.label }
-                                      : {})}
+                                    {...(isDownloadable ? { download: s.download || s.label } : {})}
                                   >
                                     <i
                                       className={`bi bi-${
@@ -65,10 +59,24 @@ export default function Slides() {
                                       } me-1`}
                                     />
                                     {s.label}
-                                    {isDownloadable && s.url !== '#' && (
+                                    {isDownloadable && (
                                       <i className="bi bi-download ms-1" title="Download" />
                                     )}
                                   </a>
+                                ) : (
+                                  <span key={s.label} className="material-link disabled" title="Coming soon">
+                                    <i
+                                      className={`bi bi-${
+                                        s.format === 'pdf'
+                                          ? 'file-pdf'
+                                          : s.format === 'colab'
+                                            ? 'cloud'
+                                            : 'file-slides'
+                                      } me-1`}
+                                    />
+                                    {s.label}
+                                    <i className="bi bi-lock ms-1" title="Coming soon" />
+                                  </span>
                                 )
                               })}
                             </div>
@@ -77,12 +85,21 @@ export default function Slides() {
                             <div>
                               <strong className="text-muted small">Notes:</strong>
                               <div className="mt-1">
-                                {lecture.notes.map((n) => (
+                                {lecture.notes.map((n) => {
+                                const isValidUrl = n.url && n.url !== '#'
+                                return isValidUrl ? (
                                   <a key={n.label} href={n.url} className="material-link">
                                     <i className="bi bi-journal-text me-1" />
                                     {n.label}
                                   </a>
-                                ))}
+                                ) : (
+                                  <span key={n.label} className="material-link disabled" title="Coming soon">
+                                    <i className="bi bi-journal-text me-1" />
+                                    {n.label}
+                                    <i className="bi bi-lock ms-1" title="Coming soon" />
+                                  </span>
+                                )
+                              })}
                               </div>
                             </div>
                           )}

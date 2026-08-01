@@ -1,25 +1,36 @@
-const baseUrl = import.meta.env.BASE_URL
+// Ensure correct base URL for assets. Fall back to '/course-portal/' when BASE_URL isn't set.
+const baseUrl = import.meta.env.BASE_URL || '/course-portal/'
 
 export const materials = {
   thinkLikeProgrammer: {
     label: 'Think Like a Programmer',
-    filename: 'think-like-a-programmer.pptx',
-    url: `${baseUrl}materials/think-like-a-programmer.pptx`,
+    filename: 'Topic-1.pptx',
+    url: `${baseUrl}materials/Slides/Topic-1.pptx`,
   },
-  CandPython: {
+  candpython: {
     label: 'C and Python',
-    filename: 'c-and-python.pptx',
-    url: `${baseUrl}materials/c-and-python.pptx`,
+    filename: 'Topic-2.pptx',
+    url: `${baseUrl}materials/Slides/Topic-2.pptx`,
+  },
+  identifiers: {
+    label: 'Identifiers, Statements, Variables, and Keywords',
+    filename: 'Topic-3.pptx',
+    url: `${baseUrl}materials/Slides/Topic-3.pptx`,
+  },
+  inputOutputStatements: {
+    label: 'Input/Output, Command Line Arguments, and Basic Syntax',
+    filename: 'Topic-4.pptx',
+    url: `${baseUrl}materials/Slides/Topic-4.pptx`,
   },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
-    url: `${baseUrl}materials/Python_Lab_Task_Git_GitHub_VSCode.pdf`,
+    url: `${baseUrl}materials/Assignments/Python_Lab_Task_Git_GitHub_VSCode.pdf`,
   },
   week1LabTask: {
     label: 'Week - 1 Lab Task',
     filename: 'Week - 1 Lab Task.pdf',
-    url: `${baseUrl}materials/Week - 1 Lab Task.pdf`,
+    url: `${baseUrl}materials/Assignments/Week - 1 Lab Task.pdf`,
   },
 }
 
@@ -42,6 +53,7 @@ export const courseInfo = {
   instructors: [
     { name: 'Mr. S. Vinod Kumar', role: 'Assistant Professor', email: 'vinodkumar.s@gmrit.edu.in' },
   ],
+  
   
   logistics: {
     lectures: 'Monday(Lab), Tuesday/Wednesday/Thursday.',
@@ -73,7 +85,7 @@ export const courseInfo = {
 export const schedule = [
   {
     week: 1,
-    date: 'Tue Jul 16',
+    Date: 'Tue Jan 6',
     description: 'Think Like a Programmer',
     materials: [
       {
@@ -87,28 +99,46 @@ export const schedule = [
     deadlines: [],
   },
   {
-    date: 'Thu Jan 23',
+    Date : 'Tue Jan 13',
     description: 'C and Python',
     materials: [
       {
         label: 'slides',
         type: 'ppt',
-        url: materials.CandPython.url,
-        download: materials.CandPython.filename,
+        url: materials.candpython.url,
+        download: materials.candpython.filename,
       },
     ],
     events: [],
     deadlines: [{ label: 'PA 0 due', type: 'assignment' }],
   },
   {
-    date: 'Fri Jan 9',
-    description: 'Python Environment Review Session',
+    Date: 'Tue Jan 20',
+    description: 'Identifiers, Statements, Variables, and Keywords',
     materials: [
-      { label: 'colab', type: 'colab', url: '#' },
+      { label : 'slides',
+        type: 'ppt',
+        url: materials.identifiers.url,
+        download: materials.identifiers.filename,
+      }
     ],
     events: [{ label: '1:30–2:50 PM, NVIDIA Auditorium', type: 'session' }],
     deadlines: [],
   },
+  {
+    Date: 'Tue Jan 27',
+    description: 'Input/Output, Command Line Arguments, and Basic Syntax',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.inputOutputStatements.url,
+        download: materials.inputOutputStatements.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],
+  }
 ]
 
 export const assignments = [
@@ -222,10 +252,10 @@ export const lectures = [
     title: 'Course Introduction & Python Setup',
     date: 'Tue Jan 6',
     slides: [
-      { label: 'Intro Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Intro Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Intro Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Intro Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
+    notes: [{ label: 'Lecture Notes', url: null }],
     video: null,
   },
   {
@@ -233,88 +263,88 @@ export const lectures = [
     title: 'Variables, Data Types & Basic Operations',
     date: 'Thu Jan 8',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 2,
     title: 'Conditionals, Loops & Iteration',
     date: 'Tue Jan 13',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 2,
     title: 'Functions & Scope',
     date: 'Thu Jan 15',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 3,
     title: 'Lists, Tuples & Dictionaries',
     date: 'Tue Jan 20',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 3,
     title: 'Strings & File I/O',
     date: 'Thu Jan 22',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
     notes: [],
-    video: '#',
+    video: null,
   },
   {
     week: 4,
     title: 'Classes & Objects',
     date: 'Tue Jan 27',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 4,
     title: 'Inheritance & Polymorphism',
     date: 'Thu Jan 29',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
     notes: [],
-    video: '#',
+    video: null,
   },
   {
     week: 5,
     title: 'Error Handling & Testing',
     date: 'Tue Feb 3',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 5,
@@ -325,72 +355,82 @@ export const lectures = [
       { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
     ],
     notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+  },
+  {
+    week: 5,
+    title: 'Modules & Packages',
+    date: 'Thu Feb 5',
+    slides: [
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
+    ],
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 6,
     title: 'NumPy & Array Operations',
     date: 'Tue Feb 10',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Colab Notebook', url: '#', format: 'colab' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Colab Notebook', url: null, format: 'colab' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 6,
     title: 'Pandas & Data Analysis',
     date: 'Thu Feb 12',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
     notes: [],
-    video: '#',
+    video: null,
   },
   {
     week: 7,
     title: 'Data Visualization with Matplotlib',
     date: 'Tue Feb 17',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 7,
     title: 'Working with APIs & JSON',
     date: 'Thu Feb 19',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
     notes: [],
-    video: '#',
+    video: null,
   },
   {
     week: 8,
     title: 'Web Basics with Flask',
     date: 'Tue Feb 24',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
     ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-    video: '#',
+    notes: [{ label: 'Lecture Notes', url: null }],
+    video: null,
   },
   {
     week: 8,
     title: 'Final Project Overview',
     date: 'Thu Feb 26',
     slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Project Handout', url: '#', format: 'doc' },
+      { label: 'Slides (PDF)', url: null, format: 'pdf' },
+      { label: 'Project Handout', url: null, format: 'doc' },
     ],
     notes: [],
-    video: '#',
+    video: null,
   },
 ]

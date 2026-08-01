@@ -13,7 +13,7 @@ export default function CourseFooter() {
   }, [])
 
   return (
-    <footer className="course-footer" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>
+    <footer clssName="course-footer" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>
       <Container>
         <Row>
           <Col md={6}>
