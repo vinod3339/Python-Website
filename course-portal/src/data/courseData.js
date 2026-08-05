@@ -22,6 +22,16 @@ export const materials = {
     filename: 'Topic-4.pptx',
     url: `${baseUrl}materials/Slides/Topic-4.pptx`,
   },
+  dataTypes: {
+    label: 'Data types',
+    filename: 'Topic-5.pptx',
+    url: `${baseUrl}materials/Slides/Topic-5.pptx`,
+  },
+  operators: {
+    label: 'Operators',
+    filename: 'Topic-6.pptx',
+    url: `${baseUrl}materials/Slides/Topic-6.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -31,6 +41,11 @@ export const materials = {
     label: 'Week - 1 Lab Task',
     filename: 'Week - 1 Lab Task.pdf',
     url: `${baseUrl}materials/Assignments/Week - 1 Lab Task.pdf`,
+  },
+  week2LabTask: {
+    label: 'Week - 2 Lab Task',
+    filename: 'Week - 2 Lab Task.pdf',
+    url: `${baseUrl}materials/Assignments/Week - 2 Lab Task.pdf`,
   },
 }
 
@@ -138,6 +153,34 @@ export const schedule = [
     ],
     events: [],
     deadlines: [],
+  },
+  {
+    Date: 'Aug 1',
+    description: 'Data types',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.dataTypes.url,
+        download: materials.dataTypes.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],
+  },
+  {
+    Date: 'Aug 1',
+    description: 'operators',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.operators.url,
+        download: materials.operators.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],
   }
 ]
 
@@ -183,18 +226,21 @@ export const assignments = [
   {
     id: 'pa2',
     number: 2,
-    title: 'Data Structures',
-    dueDate: 'Thu Jan 29, 5:00 PM',
-    released: 'Thu Jan 22',
-    points: 100,
+    title: 'Data types and Operators',
+    dueDate: 'Sat Aug 1, 12:00 PM',
+    released: 'Tue Aug 3',
+    points: 50,
     description:
-      'Build a text analyzer that processes files and computes word frequencies, and implement a simple contact book using dictionaries.',
+      'Data types and Operators',
     resources: [
       { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Handout (PDF)', url: '#', icon: 'file-pdf' },
-      { label: 'Test Data', url: '#', icon: 'folder' },
+      { label: 'Week 2 Lab Task (PDF)', 
+        type: 'pdf',
+        url: materials.week2LabTask.url,
+        download: materials.week2LabTask.filename,
+        icon: 'file-pdf' },
     ],
-    topics: ['lists', 'dictionaries', 'file I/O', 'string methods'],
+    topics: ['integers', 'floats', 'strings', 'lists', 'tuples', 'dictionaries', 'operators'],
   },
   {
     id: 'pa3',
