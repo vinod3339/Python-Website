@@ -32,6 +32,26 @@ export const materials = {
     filename: 'Topic-6.pptx',
     url: `${baseUrl}materials/Slides/Topic-6.pptx`,
   },
+  Expressions: {
+    label: 'Expressions',
+    filename: 'Topic-7.pptx',
+    url: `${baseUrl}materials/Slides/Topic-7.pptx`,
+  },
+  controlFlow: {
+    label: 'Control Flow',
+    filename: 'Topic-8.pptx',
+    url: `${baseUrl}materials/Slides/Topic-8.pptx`,
+  },
+  loops: {
+    label: 'Loops',
+    filename: 'Topic-9.pptx',
+    url: `${baseUrl}materials/Slides/Topic-9.pptx`,
+  },
+  builtInFunctions: {
+    label: 'Built-in Functions',
+    filename: 'Topic-10.pptx',
+    url: `${baseUrl}materials/Slides/Topic-10.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -182,7 +202,63 @@ export const schedule = [
     ],
     events: [],
     deadlines: [],
-  }
+  },
+  {
+    date: 'Aug 1',
+    description: 'Expressions',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.Expressions.url,
+        download: materials.Expressions.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],  
+  },
+  {
+    date: 'Aug 1',
+    description: 'Conditional statements',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.controlFlow.url,
+        download: materials.controlFlow.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],  
+  },
+  {
+    date: 'Aug 1',
+    description: 'Iteration statements',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.loops.url,
+        download: materials.loops.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],  
+  },
+  {
+    date: 'Aug 1',
+    description: 'Built-in Functionsand Modules', 
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.builtInFunctions.url,
+        download: materials.builtInFunctions.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],  
+  },
 ]
 
 export const assignments = [
