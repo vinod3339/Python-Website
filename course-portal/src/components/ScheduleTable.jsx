@@ -1,28 +1,28 @@
 import { Fragment } from 'react'
 import { Table } from 'react-bootstrap'
-import { schedule, scheduleSpreadsheet } from '../data/courseData'
+import { schedule } from '../data/courseData'
 
 function MaterialLinks({ materials }) {
   if (!materials?.length) return null
   return (
     <>
       {materials.map((m) => {
-        const isExternal = m.url.startsWith('http')
+        const isExternal = m.url?.startsWith('http') ?? false
         const isDownloadable =
           !isExternal && (m.download || m.type === 'ppt' || m.type === 'pdf')
         return (
           <a
             key={m.label}
-            href={m.url}
+            href={m.url || '#'}
             className={`material-link${m.type === 'colab' ? ' assignment' : ''}`}
-            {...(isDownloadable && m.url !== '#'
+            {...(isDownloadable && m.url && m.url !== '#'
               ? { download: m.download || `${m.label}.pptx` }
               : {})}
             {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           >
             [{m.label}]
             {m.type === 'excel' && <i className="bi bi-file-earmark-excel ms-1" title="Excel" />}
-            {isDownloadable && m.url !== '#' && (
+            {isDownloadable && m.url && m.url !== '#' && (
               <i className="bi bi-download ms-1" title="Download" />
             )}
           </a>
@@ -73,19 +73,6 @@ export default function ScheduleTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td colSpan={5}>
-              <a
-                href={scheduleSpreadsheet.url}
-                className="material-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-file-earmark-excel me-1" />
-                [{scheduleSpreadsheet.label}]
-              </a>
-            </td>
-          </tr>
           {schedule.map((item, index) => {
             if (item.entries) {
               return (
@@ -99,8 +86,8 @@ export default function ScheduleTable() {
                     </tr>
                   )}
                   {item.entries.map((entry) => (
-                    <tr key={`${item.week}-${entry.date}`}>
-                      <td>{entry.date}</td>
+                    <tr key={`${item.week}-${entry.date || entry.Date}`}>
+                      <td>{entry.date || entry.Date}</td>
                       <td>{entry.description}</td>
                       <td>
                         <MaterialLinks materials={entry.materials} />
@@ -117,9 +104,10 @@ export default function ScheduleTable() {
               )
             }
 
+            const itemDate = item.date || item.Date || ''
             return (
-              <tr key={`entry-${index}-${item.date}`}>
-                <td>{item.date}</td>
+              <tr key={`entry-${index}-${itemDate}`}>
+                <td>{itemDate}</td>
                 <td>{item.description}</td>
                 <td>
                   <MaterialLinks materials={item.materials} />
@@ -138,3 +126,4 @@ export default function ScheduleTable() {
     </div>
   )
 }
+

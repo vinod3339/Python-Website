@@ -56,16 +56,26 @@ export default function Assignments() {
                     <span className="due-date">{pa.dueDate}</span>
                   </div>
                   <div>
-                    {pa.resources.map((r) => (
-                      <a
-                        key={r.label}
-                        href={r.url}
-                        className="material-link d-inline-block mb-1"
-                      >
-                        <i className={`bi bi-${r.icon} me-1`} />
-                        {r.label}
-                      </a>
-                    ))}
+                    {pa.resources.map((r) => {
+                      const isExternal = r.url?.startsWith('http') ?? false
+                      const isDownloadable = !isExternal && r.url && r.url !== '#'
+                      return (
+                        <a
+                          key={r.label}
+                          href={r.url}
+                          className="material-link d-inline-block mb-1 me-2"
+                          {...(isDownloadable
+                            ? { download: r.download || true, target: '_blank', rel: 'noopener noreferrer' }
+                            : isExternal
+                              ? { target: '_blank', rel: 'noopener noreferrer' }
+                              : {})}
+                        >
+                          <i className={`bi bi-${r.icon} me-1`} />
+                          {r.label}
+                          {isDownloadable && <i className="bi bi-download ms-1" title="Download" />}
+                        </a>
+                      )
+                    })}
                   </div>
                 </Col>
               </Row>

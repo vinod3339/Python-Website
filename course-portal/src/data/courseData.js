@@ -45,13 +45,14 @@ export const materials = {
   week2LabTask: {
     label: 'Week - 2 Lab Task',
     filename: 'Week - 2 Lab Task.pdf',
-    url: `${baseUrl}materials/Assignments/Week - 2 Lab Task.pdf`,
+    url: `${baseUrl}materials/Assignments/Week - 2 Lab Task.pdf`, 
   },
-}
+  pythoncasebasedexamples: {
+    label: 'Python Case Based Examples',
+    filename: 'python_case_based_examples.pdf',
+    url: `${baseUrl}materials/Assignments/python_case_based_examples.pdf`,
+  },
 
-export const scheduleSpreadsheet = {
-  label: 'Course Schedule (Excel)',
-  url: 'https://gmredu-my.sharepoint.com/:x:/g/personal/vinodkumar_s_gmrit_edu_in/IQCAalG9fUImRKdqNK8OHBzaAecux0GFH-5AEyljcpaskjY?e=k8Z9C9',
 }
 
 export const courseInfo = {
@@ -100,7 +101,7 @@ export const courseInfo = {
 export const schedule = [
   {
     week: 1,
-    Date: 'Tue Jan 6',
+    date: 'Tue Jan 6',
     description: 'Think Like a Programmer',
     materials: [
       {
@@ -114,7 +115,7 @@ export const schedule = [
     deadlines: [],
   },
   {
-    Date : 'Tue Jan 13',
+    date: 'Tue Jan 13',
     description: 'C and Python',
     materials: [
       {
@@ -128,7 +129,7 @@ export const schedule = [
     deadlines: [{ label: 'PA 0 due', type: 'assignment' }],
   },
   {
-    Date: 'Tue Jan 20',
+    date: 'Tue Jan 20',
     description: 'Identifiers, Statements, Variables, and Keywords',
     materials: [
       { label : 'slides',
@@ -141,7 +142,7 @@ export const schedule = [
     deadlines: [],
   },
   {
-    Date: 'Tue Jan 27',
+    date: 'Tue Jan 27',
     description: 'Input/Output, Command Line Arguments, and Basic Syntax',
     materials: [
       {
@@ -155,7 +156,7 @@ export const schedule = [
     deadlines: [],
   },
   {
-    Date: 'Aug 1',
+    date: 'Aug 1',
     description: 'Data types',
     materials: [
       {
@@ -169,7 +170,7 @@ export const schedule = [
     deadlines: [],
   },
   {
-    Date: 'Aug 1',
+    date: 'Aug 1',
     description: 'operators',
     materials: [
       {
@@ -239,24 +240,28 @@ export const assignments = [
         url: materials.week2LabTask.url,
         download: materials.week2LabTask.filename,
         icon: 'file-pdf' },
+        { label: 'Python Case Based Examples (PDF)',
+        type: 'pdf',
+        url: materials.pythoncasebasedexamples.url,
+        download: materials.pythoncasebasedexamples.filename,
+        icon: 'file-pdf' },
     ],
     topics: ['integers', 'floats', 'strings', 'lists', 'tuples', 'dictionaries', 'operators'],
   },
   {
     id: 'pa3',
     number: 3,
-    title: 'Object-Oriented Programming',
-    dueDate: 'Tue Feb 10, 5:00 PM',
-    released: 'Fri Jan 30',
-    points: 100,
+    title: 'Object Oriented Programming',
+    dueDate: 'Sat Aug 1, 12:00 PM',
+    released: 'Tue Aug 3',
+    points: 50,
     description:
-      'Design a class hierarchy for a library management system. Implement Book, Member, and Library classes with appropriate methods and inheritance.',
+      'Object Oriented Programming',
     resources: [
       { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Handout (PDF)', url: '#', icon: 'file-pdf' },
-      { label: 'UML Diagram', url: '#', icon: 'diagram-3' },
+      
     ],
-    topics: ['classes', 'inheritance', '__init__', 'methods'],
+    topics: ['integers', 'floats', 'strings', 'lists', 'tuples', 'dictionaries', 'operators'],
   },
   {
     id: 'pa4',
