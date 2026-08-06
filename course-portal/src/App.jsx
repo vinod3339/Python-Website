@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import CourseNavbar from './components/CourseNavbar'
 import CourseFooter from './components/CourseFooter'
 import Home from './pages/Home'
@@ -9,7 +9,7 @@ import CourseInfo from './pages/CourseInfo'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <CourseNavbar />
       <main>
         <Routes>
@@ -21,6 +21,6 @@ export default function App() {
         </Routes>
       </main>
       <CourseFooter />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
