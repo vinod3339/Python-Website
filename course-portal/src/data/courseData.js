@@ -72,6 +72,11 @@ export const materials = {
     filename: 'python_case_based_examples.pdf',
     url: `${baseUrl}materials/Assignments/python_case_based_examples.pdf`,
   },
+  listNotebook: {
+    label: 'List',
+    filename: 'List.ipynb',
+    url: 'https://colab.research.google.com/github/vinod3339/Python-Website/blob/main/course-portal/public/materials/Jupyter%20Notebooks/List.ipynb',
+  },
 
 }
 
@@ -247,7 +252,7 @@ export const schedule = [
   },
   {
     date: 'Aug 1',
-    description: 'Built-in Functionsand Modules', 
+    description: 'Built-in Functions and Modules', 
     materials: [
       {
         label: 'slides',
@@ -258,6 +263,19 @@ export const schedule = [
     ],
     events: [],
     deadlines: [],  
+  },
+  {
+    date: 'Aug 1',
+    description: 'Lists',
+    materials: [
+      {
+        label: 'List',
+        type: 'colab',
+        url: materials.listNotebook.url,
+      },
+    ],
+    events: [],
+    deadlines: [],
   },
 ]
 

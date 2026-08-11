@@ -7,6 +7,7 @@ function MaterialLinks({ materials }) {
   return (
     <>
       {materials.map((m) => {
+        if (m.type === 'colab') return null
         const isExternal = m.url?.startsWith('http') ?? false
         const isDownloadable =
           !isExternal && (m.download || m.type === 'ppt' || m.type === 'pdf')
@@ -14,7 +15,7 @@ function MaterialLinks({ materials }) {
           <a
             key={m.label}
             href={m.url || '#'}
-            className={`material-link${m.type === 'colab' ? ' assignment' : ''}`}
+            className="material-link"
             {...(isDownloadable && m.url && m.url !== '#'
               ? { download: m.download || `${m.label}.pptx` }
               : {})}
@@ -28,6 +29,31 @@ function MaterialLinks({ materials }) {
           </a>
         )
       })}
+    </>
+  )
+}
+
+function ColabLinks({ materials }) {
+  const colabItems = materials?.filter((m) => m.type === 'colab') ?? []
+  if (!colabItems.length) return null
+  return (
+    <>
+      {colabItems.map((m) => (
+        <a
+          key={m.label}
+          href={m.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={`Open ${m.label} in Google Colab`}
+          style={{ display: 'inline-block', marginRight: '4px' }}
+        >
+          <img
+            src="https://colab.research.google.com/assets/colab-badge.svg"
+            alt={`Open ${m.label} in Colab`}
+            style={{ height: '20px', verticalAlign: 'middle' }}
+          />
+        </a>
+      ))}
     </>
   )
 }
@@ -65,11 +91,12 @@ export default function ScheduleTable() {
       <Table className="schedule-table" bordered hover>
         <thead>
           <tr>
-            <th style={{ width: '12%' }}>Date</th>
-            <th style={{ width: '35%' }}>Description</th>
-            <th style={{ width: '25%' }}>Course Materials</th>
+            <th style={{ width: '10%' }}>Date</th>
+            <th style={{ width: '30%' }}>Description</th>
+            <th style={{ width: '20%' }}>Course Materials</th>
+            <th style={{ width: '10%' }}>Colab</th>
             <th style={{ width: '15%' }}>Events</th>
-            <th style={{ width: '13%' }}>Deadlines</th>
+            <th style={{ width: '15%' }}>Deadlines</th>
           </tr>
         </thead>
         <tbody>
@@ -78,11 +105,11 @@ export default function ScheduleTable() {
               return (
                 <Fragment key={`week-${item.week ?? index}`}>
                   <tr className="week-header">
-                    <td colSpan={5}>Week {item.week}</td>
+                    <td colSpan={6}>Week {item.week}</td>
                   </tr>
                   {item.category && (
                     <tr key={`cat-${item.week ?? index}`} className="category-header">
-                      <td colSpan={5}>{item.category}</td>
+                      <td colSpan={6}>{item.category}</td>
                     </tr>
                   )}
                   {item.entries.map((entry) => (
@@ -91,6 +118,9 @@ export default function ScheduleTable() {
                       <td>{entry.description}</td>
                       <td>
                         <MaterialLinks materials={entry.materials} />
+                      </td>
+                      <td>
+                        <ColabLinks materials={entry.materials} />
                       </td>
                       <td>
                         <EventBadges events={entry.events} />
@@ -113,6 +143,9 @@ export default function ScheduleTable() {
                   <MaterialLinks materials={item.materials} />
                 </td>
                 <td>
+                  <ColabLinks materials={item.materials} />
+                </td>
+                <td>
                   <EventBadges events={item.events} />
                 </td>
                 <td>
@@ -126,4 +159,3 @@ export default function ScheduleTable() {
     </div>
   )
 }
-
