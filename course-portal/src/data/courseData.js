@@ -80,7 +80,7 @@ export const materials = {
   week2LabTask: {
     label: 'Week - 2 Lab Task',
     filename: 'Week - 2 Lab Task.pdf',
-    url: `${baseUrl}materials/Assignments/Week - 2 Lab Task.pdf`, 
+    url: `${baseUrl}materials/Assignments/Week - 2 Lab Task.pdf`,
   },
   pythoncasebasedexamples: {
     label: 'Python Case Based Examples',
@@ -90,14 +90,13 @@ export const materials = {
   week3LabTask: {
     label: 'Week - 3 Lab Task',
     filename: 'Week - 3 Lab Task.pdf',
-    url: `${baseUrl}materials/Assignments/Week - 3 Lab Task.pdf`, 
+    url: `${baseUrl}materials/Assignments/Week - 3 Lab Task.pdf`,
   },
   listNotebook: {
     label: 'List',
     filename: 'List.ipynb',
     url: 'https://colab.research.google.com/github/vinod3339/Python-Website/blob/main/course-portal/public/materials/Jupyter%20Notebooks/List.ipynb',
   },
-
 }
 
 export const courseInfo = {
@@ -106,7 +105,7 @@ export const courseInfo = {
   term: 'ODD Semester 2026',
   institution: 'GMRIT Deemed to be University',
   description:
-    'Python is one of the most popular and versatile programming languages in the world. This course provides a thorough Problem Solving using Python, covering fundamentals through advanced topics including data structures, object-oriented programming, and practical applications in data science and web development.',
+    'Python is one of the most popular and versatile programming languages in the world. This course provides thorough problem-solving skills using Python, covering fundamentals through data structures, control flow, functions, modular programming, and practical applications.',
   quote: {
     text: 'Take it. 23CS301 taught me how to think like a programmer and build real-world applications.',
     attribution: 'A 23CS301 student',
@@ -114,13 +113,11 @@ export const courseInfo = {
   instructors: [
     { name: 'Mr. S. Vinod Kumar', role: 'Assistant Professor', email: 'vinodkumar.s@gmrit.edu.in' },
   ],
-  
-  
   logistics: {
-    lectures: 'Monday(Lab), Tuesday/Wednesday/Thursday.',
-    officeHours: 'Hybrid format — remote (Zoom) or in person. See the schedule for times and locations.',
-    contact:
-      'Ask course-related questions, email vinodkumar.s@gmrit.edu.in.',
+    lectures: 'Monday (Lab), Tuesday / Wednesday / Thursday.',
+    officeHours: 'Hybrid format — remote or in-person. See the schedule for times and locations.',
+    videos: 'Recorded lectures available on course portal / LMS.',
+    contact: 'For course-related questions, email vinodkumar.s@gmrit.edu.in.',
   },
   prerequisites: [
     'Introduction to C Programming',
@@ -133,9 +130,7 @@ export const courseInfo = {
     { component: 'Lab Internal Exam', weight: '10 Marks' },
     { component: 'Lab External Exam', weight: '20 Marks' },
     { component: 'Semester Exam', weight: '70 Marks' },
-
   ],
-  
   textbooks: [
     { title: 'Python Crash Course', author: 'Eric Matthes', note: 'Recommended, not required' },
     { title: 'Automate the Boring Stuff with Python', author: 'Al Sweigart', note: 'Free online' },
@@ -146,198 +141,171 @@ export const courseInfo = {
 export const schedule = [
   {
     week: 1,
-    date: 'Tue Jan 6',
-    description: 'Think Like a Programmer',
-    materials: [
+    entries: [
       {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.thinkLikeProgrammer.url,
-        download: materials.thinkLikeProgrammer.filename,
+        date: 'Aug 4',
+        description: 'Think Like a Programmer & C vs Python Overview',
+        materials: [
+          {
+            label: 'Topic 1 Slides',
+            type: 'ppt',
+            url: materials.thinkLikeProgrammer.url,
+            download: materials.thinkLikeProgrammer.filename,
+          },
+          {
+            label: 'Topic 2 Slides',
+            type: 'ppt',
+            url: materials.candpython.url,
+            download: materials.candpython.filename,
+          },
+        ],
+        events: [{ label: 'Course Orientation & Environment Setup', type: 'session' }],
+        deadlines: [
+          {
+            label: 'PA 0: Git & GitHub Task released',
+            type: 'assignment',
+          },
+        ],
+      },
+      {
+        date: 'Aug 6',
+        description: 'Identifiers, Statements, Variables, Keywords, Input/Output & Basic Syntax',
+        materials: [
+          {
+            label: 'Topic 3 Slides',
+            type: 'ppt',
+            url: materials.identifiers.url,
+            download: materials.identifiers.filename,
+          },
+          {
+            label: 'Topic 4 Slides',
+            type: 'ppt',
+            url: materials.inputOutputStatements.url,
+            download: materials.inputOutputStatements.filename,
+          },
+        ],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 1 Lab Task released',
+            type: 'assignment',
+          },
+        ],
       },
     ],
-    events: [],
-    deadlines: [],
   },
   {
-    date: 'Tue Jan 13',
-    description: 'C and Python',
-    materials: [
+    week: 2,
+    entries: [
       {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.candpython.url,
-        download: materials.candpython.filename,
+        date: 'Aug 11',
+        description: 'Data Types, Operators & Expressions',
+        materials: [
+          {
+            label: 'Topic 5 Slides',
+            type: 'ppt',
+            url: materials.dataTypes.url,
+            download: materials.dataTypes.filename,
+          },
+          {
+            label: 'Topic 6 Slides',
+            type: 'ppt',
+            url: materials.operators.url,
+            download: materials.operators.filename,
+          },
+          {
+            label: 'Topic 7 Slides',
+            type: 'ppt',
+            url: materials.Expressions.url,
+            download: materials.Expressions.filename,
+          },
+        ],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 2 Lab Task & Case Examples released',
+            type: 'assignment',
+          },
+        ],
       },
     ],
-    events: [],
-    deadlines: [{ label: 'PA 0 due', type: 'assignment' }],
   },
   {
-    date: 'Tue Jan 20',
-    description: 'Identifiers, Statements, Variables, and Keywords',
-    materials: [
-      { label : 'slides',
-        type: 'ppt',
-        url: materials.identifiers.url,
-        download: materials.identifiers.filename,
-      }
-    ],
-    events: [{ label: '1:30–2:50 PM, NVIDIA Auditorium', type: 'session' }],
-    deadlines: [],
-  },
-  {
-    date: 'Tue Jan 27',
-    description: 'Input/Output, Command Line Arguments, and Basic Syntax',
-    materials: [
+    week: 3,
+    entries: [
       {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.inputOutputStatements.url,
-        download: materials.inputOutputStatements.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],
-  },
-  {
-    date: 'Aug 1',
-    description: 'Data types',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.dataTypes.url,
-        download: materials.dataTypes.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],
-  },
-  {
-    date: 'Aug 1',
-    description: 'operators',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.operators.url,
-        download: materials.operators.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],
-  },
-  {
-    date: 'Aug 1',
-    description: 'Expressions',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.Expressions.url,
-        download: materials.Expressions.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],  
-  },
-  {
-    date: 'Aug 1',
-    description: 'Conditional statements',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.controlFlow.url,
-        download: materials.controlFlow.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],  
-  },
-  {
-    date: 'Aug 1',
-    description: 'Iteration statements',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.loops.url,
-        download: materials.loops.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],  
-  },
-  {
-    date: 'Aug 1',
-    description: 'Built-in Functions and Modules', 
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.builtInFunctions.url,
-        download: materials.builtInFunctions.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],  
-  },
-  {
-    date: 'Aug 15',
-    description: 'Lists',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.Lists.url,
-        download: materials.Lists.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],  
-  },
-  {
-    date: 'Aug 15',
-    description: 'Tuples',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.Tuples.url,
-        download: materials.Tuples.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],  
-  },
-  {
-    date: 'Aug 15',
-    description: 'Dictionaries',
-    materials: [
-      {
-        label: 'slides',
-        type: 'ppt',
-        url: materials.Dictionaries.url,
-        download: materials.Dictionaries.filename,
-      }
-    ],
-    events: [],
-    deadlines: [],
-  },
-  {
-    date: 'Aug 1',
-    description: 'Lists',
-    materials: [
-      {
-        label: 'List',
-        type: 'colab',
-        url: materials.listNotebook.url,
+        date: 'Aug 18',
+        description: 'Control Flow (Conditionals) & Loops (Iteration)',
+        materials: [
+          {
+            label: 'Topic 8 Slides',
+            type: 'ppt',
+            url: materials.controlFlow.url,
+            download: materials.controlFlow.filename,
+          },
+          {
+            label: 'Topic 9 Slides',
+            type: 'ppt',
+            url: materials.loops.url,
+            download: materials.loops.filename,
+          },
+        ],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 3 Lab Task released',
+            type: 'assignment',
+          },
+        ],
       },
     ],
-    events: [],
-    deadlines: [],
+  },
+  {
+    week: 4,
+    entries: [
+      {
+        date: 'Aug 25',
+        description: 'Built-in Functions, Modules & Data Structures (Lists, Tuples, Dictionaries)',
+        materials: [
+          {
+            label: 'Topic 10 Slides',
+            type: 'ppt',
+            url: materials.builtInFunctions.url,
+            download: materials.builtInFunctions.filename,
+          },
+          {
+            label: 'Topic 11 Slides (Lists)',
+            type: 'ppt',
+            url: materials.Lists.url,
+            download: materials.Lists.filename,
+          },
+          {
+            label: 'Topic 12 Slides (Tuples)',
+            type: 'ppt',
+            url: materials.Tuples.url,
+            download: materials.Tuples.filename,
+          },
+          {
+            label: 'Topic 13 Slides (Dictionaries)',
+            type: 'ppt',
+            url: materials.Dictionaries.url,
+            download: materials.Dictionaries.filename,
+          },
+          {
+            label: 'List Notebook',
+            type: 'colab',
+            url: materials.listNotebook.url,
+          },
+        ],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 3 Lab Task due',
+            type: 'assignment',
+          },
+        ],
+      },
+    ],
   },
 ]
 
@@ -345,302 +313,148 @@ export const assignments = [
   {
     id: 'pa0',
     number: 0,
-    title: 'Environment Setup & Hello World',
-    dueDate: 'Thu Jul 22, 5:00 PM',
-    released: 'Tue Jul 14',
+    title: 'Environment Setup & Git / GitHub / VS Code',
+    dueDate: 'Sat Aug 8, 11:59 PM',
+    released: 'Tue Aug 4',
     points: 10,
     description:
-      'Install Python, set up your development environment, and write your first program. Submit a screenshot of your terminal running a "Hello, World!" script.',
+      'Install Python & VS Code, set up Git & GitHub environment, and complete the setup exercises.',
     resources: [
-      { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Setup Guide', 
+      {
+        label: 'Git & GitHub Setup Guide (PDF)',
         type: 'pdf',
         url: materials.pythonLabTaskGitHubVSCode.url,
         download: materials.pythonLabTaskGitHubVSCode.filename,
-        icon: 'file-pdf' },
+        icon: 'file-pdf',
+      },
     ],
-    topics: ['Python installation', 'IDE setup', 'Basic syntax'],
+    topics: ['Python installation', 'Git & GitHub', 'VS Code setup'],
   },
   {
     id: 'pa1',
     number: 1,
-    title: 'Fundamentals of Python',
-    dueDate: 'Tue Jul 28, 12:00 PM',
-    released: 'Tue Jan 24',
-    points: 70,
+    title: 'Week 1 Lab Task: Fundamentals of Python',
+    dueDate: 'Sat Aug 15, 11:59 PM',
+    released: 'Thu Aug 6',
+    points: 50,
     description:
-      'Python Fundametals',
+      'Practice fundamental Python concepts including identifiers, variables, keywords, basic I/O operations, and command-line arguments.',
     resources: [
-      { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Week 1 Lab Task (PDF)', 
+      {
+        label: 'Week 1 Lab Task (PDF)',
         type: 'pdf',
         url: materials.week1LabTask.url,
         download: materials.week1LabTask.filename,
-        icon: 'file-pdf' },
+        icon: 'file-pdf',
+      },
     ],
-    topics: ['Identifiers', 'statements', 'variables', 'keywords',  'input/output', 'command line arguments'],
+    topics: ['Identifiers', 'Variables', 'Keywords', 'Input/Output', 'Command-line arguments'],
   },
   {
     id: 'pa2',
     number: 2,
-    title: 'Data types and Operators',
-    dueDate: 'Sat Aug 1, 12:00 PM',
-    released: 'Tue Aug 3',
+    title: 'Week 2 Lab Task: Data Types & Operators',
+    dueDate: 'Sat Aug 22, 11:59 PM',
+    released: 'Tue Aug 11',
     points: 50,
     description:
-      'Data types and Operators',
+      'Explore built-in data types, arithmetic/logical/bitwise operators, and solve case-based problem scenarios.',
     resources: [
-      { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Week 2 Lab Task (PDF)', 
+      {
+        label: 'Week 2 Lab Task (PDF)',
         type: 'pdf',
         url: materials.week2LabTask.url,
         download: materials.week2LabTask.filename,
-        icon: 'file-pdf' },
-        { label: 'Python Case Based Examples (PDF)',
+        icon: 'file-pdf',
+      },
+      {
+        label: 'Case Based Examples (PDF)',
         type: 'pdf',
         url: materials.pythoncasebasedexamples.url,
         download: materials.pythoncasebasedexamples.filename,
-        icon: 'file-pdf' },
+        icon: 'file-pdf',
+      },
     ],
-    topics: ['integers', 'floats', 'strings', 'lists', 'tuples', 'dictionaries', 'operators'],
+    topics: ['Integers', 'Floats', 'Strings', 'Operators', 'Case-based exercises'],
   },
   {
     id: 'pa3',
     number: 3,
-    title: 'Conditionals and Loops',
-    dueDate: 'Sat Aug 18, 12:00 PM',
-    released: 'Tue Aug 15',
+    title: 'Week 3 Lab Task: Conditionals & Loops',
+    dueDate: 'Sat Aug 29, 11:59 PM',
+    released: 'Tue Aug 18',
     points: 50,
     description:
-      'Conditionals and Loops',
+      'Implement decision-making constructs (if-elif-else) and loop structures (for, while, break, continue) to solve structured problems.',
     resources: [
-      { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Week 3 Lab Task (PDF)', 
+      {
+        label: 'Week 3 Lab Task (PDF)',
         type: 'pdf',
         url: materials.week3LabTask.url,
         download: materials.week3LabTask.filename,
-        icon: 'file-pdf' },
-      
+        icon: 'file-pdf',
+      },
     ],
     topics: ['if statements', 'for loops', 'while loops', 'break and continue'],
-  },
-  {
-    id: 'pa4',
-    number: 4,
-    title: 'Data Analysis with Pandas',
-    dueDate: 'Tue Feb 24, 5:00 PM',
-    released: 'Tue Feb 17',
-    points: 100,
-    description:
-      'Analyze a real-world dataset using Pandas and Matplotlib. Create visualizations and write a short report summarizing your findings.',
-    resources: [
-      { label: 'Starter Code', url: '#', icon: 'code-slash' },
-      { label: 'Dataset (CSV)', url: '#', icon: 'table' },
-      { label: 'Colab Notebook', url: '#', icon: 'cloud' },
-    ],
-    topics: ['Pandas', 'Matplotlib', 'data cleaning', 'visualization'],
-  },
-  {
-    id: 'project',
-    number: 'Final',
-    title: 'Capstone Project',
-    dueDate: 'Fri Mar 13, 5:00 PM',
-    released: 'Thu Feb 26',
-    points: 200,
-    description:
-      'Build a complete Python application of your choice. Options include a web app, data analysis tool, game, or automation script. Present your project at the demo day.',
-    resources: [
-      { label: 'Project Guidelines', url: '#', icon: 'book' },
-      { label: 'Proposal Template', url: '#', icon: 'file-earmark-text' },
-      { label: 'Rubric', url: '#', icon: 'list-check' },
-    ],
-    topics: ['Full application', 'documentation', 'presentation'],
   },
 ]
 
 export const lectures = [
   {
     week: 1,
-    title: 'Course Introduction & Python Setup',
-    date: 'Tue Jan 6',
+    title: 'Think Like a Programmer & C vs Python',
+    date: 'Aug 4',
     slides: [
-      { label: 'Intro Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Intro Slides (PPTX)', url: null, format: 'pptx' },
+      { label: 'Topic 1: Think Like a Programmer (PPTX)', url: materials.thinkLikeProgrammer.url, format: 'pptx', download: materials.thinkLikeProgrammer.filename },
+      { label: 'Topic 2: C and Python (PPTX)', url: materials.candpython.url, format: 'pptx', download: materials.candpython.filename },
     ],
-    notes: [{ label: 'Lecture Notes', url: null }],
+    notes: [],
     video: null,
   },
   {
     week: 1,
-    title: 'Variables, Data Types & Basic Operations',
-    date: 'Thu Jan 8',
+    title: 'Identifiers, Statements, Variables, Keywords & I/O',
+    date: 'Aug 6',
     slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
+      { label: 'Topic 3: Identifiers & Keywords (PPTX)', url: materials.identifiers.url, format: 'pptx', download: materials.identifiers.filename },
+      { label: 'Topic 4: Input/Output & Syntax (PPTX)', url: materials.inputOutputStatements.url, format: 'pptx', download: materials.inputOutputStatements.filename },
     ],
-    notes: [{ label: 'Lecture Notes', url: null }],
+    notes: [],
     video: null,
   },
   {
     week: 2,
-    title: 'Conditionals, Loops & Iteration',
-    date: 'Tue Jan 13',
+    title: 'Data Types, Operators & Expressions',
+    date: 'Aug 11',
     slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
+      { label: 'Topic 5: Data types (PPTX)', url: materials.dataTypes.url, format: 'pptx', download: materials.dataTypes.filename },
+      { label: 'Topic 6: Operators (PPTX)', url: materials.operators.url, format: 'pptx', download: materials.operators.filename },
+      { label: 'Topic 7: Expressions (PPTX)', url: materials.Expressions.url, format: 'pptx', download: materials.Expressions.filename },
     ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 2,
-    title: 'Functions & Scope',
-    date: 'Thu Jan 15',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
+    notes: [],
     video: null,
   },
   {
     week: 3,
-    title: 'Lists, Tuples & Dictionaries',
-    date: 'Tue Jan 20',
+    title: 'Control Flow & Loops',
+    date: 'Aug 18',
     slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 3,
-    title: 'Strings & File I/O',
-    date: 'Thu Jan 22',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
+      { label: 'Topic 8: Control Flow (PPTX)', url: materials.controlFlow.url, format: 'pptx', download: materials.controlFlow.filename },
+      { label: 'Topic 9: Loops (PPTX)', url: materials.loops.url, format: 'pptx', download: materials.loops.filename },
     ],
     notes: [],
     video: null,
   },
   {
     week: 4,
-    title: 'Classes & Objects',
-    date: 'Tue Jan 27',
+    title: 'Built-in Functions, Lists, Tuples & Dictionaries',
+    date: 'Aug 25',
     slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 4,
-    title: 'Inheritance & Polymorphism',
-    date: 'Thu Jan 29',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [],
-    video: null,
-  },
-  {
-    week: 5,
-    title: 'Error Handling & Testing',
-    date: 'Tue Feb 3',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 5,
-    title: 'Modules & Packages',
-    date: 'Thu Feb 5',
-    slides: [
-      { label: 'Slides (PDF)', url: '#', format: 'pdf' },
-      { label: 'Slides (PPTX)', url: '#', format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: '#' }],
-  },
-  {
-    week: 5,
-    title: 'Modules & Packages',
-    date: 'Thu Feb 5',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 6,
-    title: 'NumPy & Array Operations',
-    date: 'Tue Feb 10',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Colab Notebook', url: null, format: 'colab' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 6,
-    title: 'Pandas & Data Analysis',
-    date: 'Thu Feb 12',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [],
-    video: null,
-  },
-  {
-    week: 7,
-    title: 'Data Visualization with Matplotlib',
-    date: 'Tue Feb 17',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 7,
-    title: 'Working with APIs & JSON',
-    date: 'Thu Feb 19',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [],
-    video: null,
-  },
-  {
-    week: 8,
-    title: 'Web Basics with Flask',
-    date: 'Tue Feb 24',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Slides (PPTX)', url: null, format: 'pptx' },
-    ],
-    notes: [{ label: 'Lecture Notes', url: null }],
-    video: null,
-  },
-  {
-    week: 8,
-    title: 'Final Project Overview',
-    date: 'Thu Feb 26',
-    slides: [
-      { label: 'Slides (PDF)', url: null, format: 'pdf' },
-      { label: 'Project Handout', url: null, format: 'doc' },
+      { label: 'Topic 10: Built-in Functions (PPTX)', url: materials.builtInFunctions.url, format: 'pptx', download: materials.builtInFunctions.filename },
+      { label: 'Topic 11: Lists (PPTX)', url: materials.Lists.url, format: 'pptx', download: materials.Lists.filename },
+      { label: 'Topic 12: Tuples (PPTX)', url: materials.Tuples.url, format: 'pptx', download: materials.Tuples.filename },
+      { label: 'Topic 13: Dictionaries (PPTX)', url: materials.Dictionaries.url, format: 'pptx', download: materials.Dictionaries.filename },
+      { label: 'List Jupyter Notebook', url: materials.listNotebook.url, format: 'colab' },
     ],
     notes: [],
     video: null,
