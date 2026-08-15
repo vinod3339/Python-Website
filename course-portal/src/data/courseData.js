@@ -52,6 +52,21 @@ export const materials = {
     filename: 'Topic-10.pptx',
     url: `${baseUrl}materials/Slides/Topic-10.pptx`,
   },
+  Lists: {
+    label: 'Lists',
+    filename: 'Topic-11.pptx',
+    url: `${baseUrl}materials/Slides/Topic-11.pptx`,
+  },
+  Tuples: {
+    label: 'Tuples',
+    filename: 'Topic-12.pptx',
+    url: `${baseUrl}materials/Slides/Topic-12.pptx`,
+  },
+  Dictionaries: {
+    label: 'Dictionaries',
+    filename: 'Topic-13.pptx',
+    url: `${baseUrl}materials/Slides/Topic-13.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -71,6 +86,11 @@ export const materials = {
     label: 'Python Case Based Examples',
     filename: 'python_case_based_examples.pdf',
     url: `${baseUrl}materials/Assignments/python_case_based_examples.pdf`,
+  },
+  week3LabTask: {
+    label: 'Week - 3 Lab Task',
+    filename: 'Week - 3 Lab Task.pdf',
+    url: `${baseUrl}materials/Assignments/Week - 3 Lab Task.pdf`, 
   },
   listNotebook: {
     label: 'List',
@@ -265,6 +285,48 @@ export const schedule = [
     deadlines: [],  
   },
   {
+    date: 'Aug 15',
+    description: 'Lists',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.Lists.url,
+        download: materials.Lists.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],  
+  },
+  {
+    date: 'Aug 15',
+    description: 'Tuples',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.Tuples.url,
+        download: materials.Tuples.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],  
+  },
+  {
+    date: 'Aug 15',
+    description: 'Dictionaries',
+    materials: [
+      {
+        label: 'slides',
+        type: 'ppt',
+        url: materials.Dictionaries.url,
+        download: materials.Dictionaries.filename,
+      }
+    ],
+    events: [],
+    deadlines: [],
+  },
+  {
     date: 'Aug 1',
     description: 'Lists',
     materials: [
@@ -345,17 +407,22 @@ export const assignments = [
   {
     id: 'pa3',
     number: 3,
-    title: 'Object Oriented Programming',
-    dueDate: 'Sat Aug 1, 12:00 PM',
-    released: 'Tue Aug 3',
+    title: 'Conditionals and Loops',
+    dueDate: 'Sat Aug 18, 12:00 PM',
+    released: 'Tue Aug 15',
     points: 50,
     description:
-      'Object Oriented Programming',
+      'Conditionals and Loops',
     resources: [
       { label: 'Starter Code', url: '#', icon: 'code-slash' },
+      { label: 'Week 3 Lab Task (PDF)', 
+        type: 'pdf',
+        url: materials.week3LabTask.url,
+        download: materials.week3LabTask.filename,
+        icon: 'file-pdf' },
       
     ],
-    topics: ['integers', 'floats', 'strings', 'lists', 'tuples', 'dictionaries', 'operators'],
+    topics: ['if statements', 'for loops', 'while loops', 'break and continue'],
   },
   {
     id: 'pa4',
