@@ -74,7 +74,7 @@ export const materials = {
   },
   pythonsyllabus: {
     label: 'Python Syllabus',
-    filename: 'syllabus.pdf',
+    filename: 'Syllabus.pdf',
     url: `${baseUrl}materials/Assignments/Syllabus.pdf`,
   },
   week1LabTask: {
@@ -333,7 +333,7 @@ export const assignments = [
         icon: 'file-pdf',
       },
       {
-        label: 'Python Syllabus',
+        label: 'python Syllabus',
         type: 'pdf',
         url: materials.pythonsyllabus.url,
         download: materials.pythonsyllabus.filename,
