@@ -72,6 +72,11 @@ export const materials = {
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
     url: `${baseUrl}materials/Assignments/Python_Lab_Task_Git_GitHub_VSCode.pdf`,
   },
+  pythonsyllabus: {
+    label: 'Python Syllabus',
+    filename: 'syllabus.pdf',
+    url: `${baseUrl}materials/Assignments/Syllabus.pdf`,
+  },
   week1LabTask: {
     label: 'Week - 1 Lab Task',
     filename: 'Week - 1 Lab Task.pdf',
@@ -327,8 +332,15 @@ export const assignments = [
         download: materials.pythonLabTaskGitHubVSCode.filename,
         icon: 'file-pdf',
       },
+      {
+        label: 'Python Syllabus',
+        type: 'pdf',
+        url: materials.pythonsyllabus.url,
+        download: materials.pythonsyllabus.filename,
+        icon: 'file-pdf',
+      },
     ],
-    topics: ['Python installation', 'Git & GitHub', 'VS Code setup'],
+    topics: ['Syllabus','Python installation', 'Git & GitHub', 'VS Code setup'],
   },
   {
     id: 'pa1',
