@@ -1,5 +1,5 @@
 import { Container, Row, Col, Table } from 'react-bootstrap'
-import { courseInfo } from '../data/courseData'
+import { courseInfo, materials } from '../data/courseData'
 
 export default function CourseInfo() {
   return (
@@ -45,6 +45,21 @@ export default function CourseInfo() {
             </Col>
 
             <Col lg={4}>
+              <div className="info-sidebar mb-4">
+                <h5>Course Syllabus</h5>
+                <p className="small text-muted mb-2">Download the complete course syllabus PDF.</p>
+                <a
+                  href={materials.pythonsyllabus.url}
+                  download={materials.pythonsyllabus.filename}
+                  className="btn btn-outline-danger btn-sm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="bi bi-file-pdf me-2" />
+                  Download Syllabus PDF
+                </a>
+              </div>
+
               <div className="info-sidebar mb-4">
                 <h5>Reference Texts</h5>
                 <p className="small text-muted">None required — all available free online.</p>
