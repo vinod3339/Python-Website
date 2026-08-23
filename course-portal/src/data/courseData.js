@@ -97,6 +97,11 @@ export const materials = {
     filename: 'Week - 3 Lab Task.pdf',
     url: `${baseUrl}materials/Assignments/Week - 3 Lab Task.pdf`,
   },
+  week4LabTask: {
+    label: 'Week - 4 Lab Task',
+    filename: 'Week - 4 Lab Task.pdf',
+    url: `${baseUrl}materials/Assignments/Week - 4 Lab Task.pdf`,
+  },
   listNotebook: {
     label: 'List',
     filename: 'List.ipynb',
@@ -308,6 +313,10 @@ export const schedule = [
             label: 'Week 3 Lab Task due',
             type: 'assignment',
           },
+          {
+            label: 'Week 4 Lab Task released',
+            type: 'assignment',
+          },
         ],
       },
     ],
@@ -408,6 +417,26 @@ export const assignments = [
       },
     ],
     topics: ['if statements', 'for loops', 'while loops', 'break and continue'],
+  },
+  {
+    id: 'pa4',
+    number: 4,
+    title: 'Week 4 Lab Task: Built-in Functions & Data Structures',
+    dueDate: 'Sat Sep 5, 11:59 PM',
+    released: 'Tue Aug 25',
+    points: 50,
+    description:
+      'Work with built-in functions, and implement programs using Lists, Tuples, and Dictionaries to solve structured data problems.',
+    resources: [
+      {
+        label: 'Week 4 Lab Task (PDF)',
+        type: 'pdf',
+        url: materials.week4LabTask.url,
+        download: materials.week4LabTask.filename,
+        icon: 'file-pdf',
+      },
+    ],
+    topics: ['Built-in Functions', 'Lists', 'Tuples', 'Dictionaries'],
   },
 ]
 
