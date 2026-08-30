@@ -102,6 +102,16 @@ export const materials = {
     filename: 'Week - 4 Lab Task.pdf',
     url: `${baseUrl}materials/Assignments/Week - 4 Lab Task.pdf`,
   },
+  week5LabTask: {
+    label: 'Week - 5 Lab Task',
+    filename: 'Week - 5 Lab Task.pdf',
+    url: `${baseUrl}materials/Assignments/Week - 5 Lab Task.pdf`,
+  },
+  week6LabTask: {
+    label: 'Week - 6 Lab Task',
+    filename: 'Week - 6 Lab Task.pdf',
+    url: `${baseUrl}materials/Assignments/Week - 6 Lab Task.pdf`,
+  },
   listNotebook: {
     label: 'List',
     filename: 'List.ipynb',
@@ -321,6 +331,48 @@ export const schedule = [
       },
     ],
   },
+  {
+    week: 5,
+    entries: [
+      {
+        date: 'Sep 1',
+        description: 'Strings & String Manipulation',
+        materials: [],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 4 Lab Task due',
+            type: 'assignment',
+          },
+          {
+            label: 'Week 5 Lab Task released',
+            type: 'assignment',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    week: 6,
+    entries: [
+      {
+        date: 'Sep 8',
+        description: 'Regular Expressions (re Module)',
+        materials: [],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 5 Lab Task due',
+            type: 'assignment',
+          },
+          {
+            label: 'Week 6 Lab Task released',
+            type: 'assignment',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export const assignments = [
@@ -438,6 +490,46 @@ export const assignments = [
     ],
     topics: ['Built-in Functions', 'Lists', 'Tuples', 'Dictionaries'],
   },
+  {
+    id: 'pa5',
+    number: 5,
+    title: 'Week 5 Lab Task: Strings & String Manipulation',
+    dueDate: 'Sat Sep 12, 11:59 PM',
+    released: 'Tue Sep 1',
+    points: 50,
+    description:
+      'Practice string basics, manipulation techniques, slicing, indexing, and solve problems involving word and sentence operations.',
+    resources: [
+      {
+        label: 'Week 5 Lab Task (PDF)',
+        type: 'pdf',
+        url: materials.week5LabTask.url,
+        download: materials.week5LabTask.filename,
+        icon: 'file-pdf',
+      },
+    ],
+    topics: ['Strings', 'String Manipulation', 'Slicing & Indexing', 'Text Processing'],
+  },
+  {
+    id: 'pa6',
+    number: 6,
+    title: 'Week 6 Lab Task: Regular Expressions',
+    dueDate: 'Sat Sep 19, 11:59 PM',
+    released: 'Tue Sep 8',
+    points: 50,
+    description:
+      'Understand regular expressions and their applications in pattern matching, search and replace, and text processing using Python\'s re module.',
+    resources: [
+      {
+        label: 'Week 6 Lab Task (PDF)',
+        type: 'pdf',
+        url: materials.week6LabTask.url,
+        download: materials.week6LabTask.filename,
+        icon: 'file-pdf',
+      },
+    ],
+    topics: ['Regular Expressions', 're Module', 'Pattern Matching', 'Search & Replace'],
+  }
 ]
 
 export const lectures = [
