@@ -67,6 +67,21 @@ export const materials = {
     filename: 'Topic-13.pptx',
     url: `${baseUrl}materials/Slides/Topic-13.pptx`,
   },
+  Strings: {
+    label: 'Strings',
+    filename: 'Topic-14.pptx',
+    url: `${baseUrl}materials/Slides/Topic-14.pptx`,
+  },
+  StringOperations: {
+    label: 'String Operations',
+    filename: 'Topic-15.pptx',
+    url: `${baseUrl}materials/Slides/Topic-15.pptx`,
+  },
+  RegularExpressions: {
+    label: 'Regular Expressions',
+    filename: 'Topic-16.pptx',
+    url: `${baseUrl}materials/Slides/Topic-16.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -337,7 +352,20 @@ export const schedule = [
       {
         date: 'Sep 1',
         description: 'Strings & String Manipulation',
-        materials: [],
+        materials: [
+          {
+            label: 'Topic 14 Slides (Strings)',
+            type: 'ppt',
+            url: materials.Strings.url,
+            download: materials.Strings.filename,
+          },
+          {
+            label: 'Topic 15 Slides (String Operations)',
+            type: 'ppt',
+            url: materials.StringOperations.url,
+            download: materials.StringOperations.filename,
+          },
+        ],
         events: [],
         deadlines: [
           {
@@ -358,7 +386,14 @@ export const schedule = [
       {
         date: 'Sep 8',
         description: 'Regular Expressions (re Module)',
-        materials: [],
+        materials: [
+          {
+            label: 'Topic 16 Slides (Regular Expressions)',
+            type: 'ppt',
+            url: materials.RegularExpressions.url,
+            download: materials.RegularExpressions.filename,
+          },
+        ],
         events: [],
         deadlines: [
           {
