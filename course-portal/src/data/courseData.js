@@ -157,6 +157,11 @@ export const materials = {
     filename: 'Week-6 Lab Solutions.ipynb',
     url: `${baseUrl}materials/Jupyter Notebooks/Week-6 Lab Solutions.ipynb`,
   },
+  week7LabTask: {
+    label: 'Week - 7 Lab Task',
+    filename: 'Week - 7 Lab Task.pdf',
+    url: `${baseUrl}materials/Assignments/Week - 7 Lab Task.pdf`,
+  },
   listNotebook: {
     label: 'List',
     filename: 'List.ipynb',
@@ -636,6 +641,26 @@ export const assignments = [
       },
     ],
     topics: ['Regular Expressions', 're Module', 'Pattern Matching', 'Search & Replace'],
+  },
+  {
+    id: 'pa7',
+    number: 7,
+    title: 'Week 7 Lab Task: Functions & Decorators',
+    dueDate: 'Sat Sep 26, 11:59 PM',
+    released: 'Tue Sep 15',
+    points: 50,
+    description:
+      'Explore Python functions including definition, arguments, recursion, lambda expressions, variable scope, functional programming (map, filter, reduce), and decorators.',
+    resources: [
+      {
+        label: 'Week 7 Lab Task (PDF)',
+        type: 'pdf',
+        url: materials.week7LabTask.url,
+        download: materials.week7LabTask.filename,
+        icon: 'file-pdf',
+      },
+    ],
+    topics: ['Functions', 'Recursion', 'Lambda Expressions', 'Scope', 'Functional Programming', 'Decorators'],
   }
 ]
 
