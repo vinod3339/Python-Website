@@ -82,6 +82,26 @@ export const materials = {
     filename: 'Topic-16.pptx',
     url: `${baseUrl}materials/Slides/Topic-16.pptx`,
   },
+  functions: {
+    label: 'Functions',
+    filename: 'Topic-17.pptx',
+    url: `${baseUrl}materials/Slides/Topic-17.pptx`,
+  },
+  recursiveFunctions: {
+    label: 'Recursive Functions',
+    filename: 'Topic-18.pptx',
+    url: `${baseUrl}materials/Slides/Topic-18.pptx`,
+  },
+  lambdaExpressions: {
+    label: 'Lambda Expressions',
+    filename: 'Topic-19.pptx',
+    url: `${baseUrl}materials/Slides/Topic-19.pptx`,
+  },
+  functionalProgramming: {
+    label: 'Functional Programming',
+    filename: 'Topic-20.pptx',
+    url: `${baseUrl}materials/Slides/Topic-20.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -437,6 +457,52 @@ export const schedule = [
           },
           {
             label: 'Week 6 Lab Task released',
+            type: 'assignment',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    week: 7,
+    entries: [
+      {
+        date: 'Sep 15',
+        description: 'Functions, Recursion, Lambda Expressions, Functional Programming & Decorators',
+        materials: [
+          {
+            label: 'Topic 17 Slides (Functions)',
+            type: 'ppt',
+            url: materials.functionalProgramming.url,
+            download: materials.functions.filename,
+          },
+          {
+            label: 'Topic 18 Slides (Recursive Functions)',
+            type: 'ppt',
+            url: materials.recursiveFunctions.url,
+            download: materials.recursiveFunctions.filename,
+          },
+          {
+            label: 'Topic 19 Slides (Lambda Expressions)',
+            type: 'ppt',
+            url: materials.lambdaExpressions.url,
+            download: materials.lambdaExpressions.filename,
+          },
+          {
+            label: 'Topic 20 Slides (Functional Programming)',
+            type: 'ppt',
+            url: materials.functionalProgramming.url,
+            download: materials.functionalProgramming.filename,
+          },
+        ],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 6 Lab Task due',
+            type: 'assignment',
+          },
+          {
+            label: 'Week 7 Lab Task released',
             type: 'assignment',
           },
         ],

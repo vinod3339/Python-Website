@@ -17,11 +17,11 @@ export default function Schedule() {
       <section className="content-section">
         <Container>
           <div className="mb-4">
-            <span className="material-link me-2">[slides]</span>
+            <span className="material-link me-2"><a href="/materials/Slides/Topic-17.pptx" target="_blank">Topic 17 Slides</a></span>
+            <span className="material-link me-2"><a href="/materials/Slides/Topic-18.pptx" target="_blank">Topic 18 Slides</a></span>
+            <span className="material-link me-2"><a href="/materials/Slides/Topic-19.pptx" target="_blank">Topic 19 Slides</a></span>
+            <span className="material-link me-2"><a href="/materials/Slides/Topic-20.pptx" target="_blank">Topic 20 Slides</a></span>
             <span className="material-link me-2">[notes]</span>
-            <span className="material-link assignment me-2">[colab]</span>
-            <span className="deadline-badge me-2">Deadline</span>
-            <span className="event-badge">Event / Session</span>
           </div>
           <ScheduleTable />
         </Container>
