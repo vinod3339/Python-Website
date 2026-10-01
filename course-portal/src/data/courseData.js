@@ -182,6 +182,11 @@ export const materials = {
     filename: 'Week - 7 Lab Task.pdf',
     url: `${baseUrl}materials/Assignments/Week - 7 Lab Task.pdf`,
   },
+  Week8LabTask: {
+    label: 'Week 8 Lab Task',
+    filename: 'Week 8 Lab Task.pdf',
+    url: `${baseUrl}materials/Assignments/Week - 8 Lab Task.pdf`,
+  },
   listNotebook: {
     label: 'List',
     filename: 'List.ipynb',
@@ -727,6 +732,26 @@ export const assignments = [
       },
     ],
     topics: ['Functions', 'Recursion', 'Lambda Expressions', 'Scope', 'Functional Programming', 'Decorators'],
+  },
+  {
+    id: 'pa8',
+    number: 8,
+    title: 'Python Capstone Project',
+    dueDate: 'Sun Oct 4, 11:59 PM',
+    released: 'Tue Sep 22',
+    points: 100,
+    description:
+      'Apply all the concepts learned in the course to design and implement a comprehensive Python project that demonstrates problem-solving skills and programming proficiency.',
+    resources: [
+      {
+        label: 'Python Capstone Project (PDF)',
+        type: 'pdf',
+        url: materials.Week8LabTask.url,
+        download: materials.Week8LabTask.filename,
+        icon: 'file-pdf',
+      }
+    ],
+    topics: ['Capstone Project', 'Problem Solving', 'Comprehensive Project'],
   }
 ]
 

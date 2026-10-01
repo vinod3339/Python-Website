@@ -39,7 +39,7 @@ export default function Assignments() {
                   <h4 className="mb-2">{pa.title}</h4>
                   <p className="text-muted mb-2">{pa.description}</p>
                   <div className="mb-2">
-                    {pa.topics.map((topic) => (
+                    {pa.topics?.map((topic) => (
                       <Badge key={topic} bg="light" text="dark" className="me-1 mb-1">
                         {topic}
                       </Badge>
@@ -56,7 +56,7 @@ export default function Assignments() {
                     <span className="due-date">{pa.dueDate}</span>
                   </div>
                   <div>
-                    {pa.resources.map((r) => {
+                    {pa.resources?.map((r) => {
                       const isExternal = r.url?.startsWith('http') ?? false
                       const isDownloadable = !isExternal && r.url && r.url !== '#'
                       return (
