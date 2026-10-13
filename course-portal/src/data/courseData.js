@@ -102,6 +102,31 @@ export const materials = {
     filename: 'Topic-20.pptx',
     url: `${baseUrl}materials/Slides/Topic-20.pptx`,
   },
+  itertools: {
+    label: 'Itertools in Python',
+    filename: 'Topic-21.pptx',
+    url: `${baseUrl}materials/Slides/Topic-21.pptx`,
+  },
+  modulesAndPackages: {
+    label: 'Modules and Packages',
+    filename: 'Topic-22.pptx',
+    url: `${baseUrl}materials/Slides/Topic-22.pptx`,
+  },
+  pythonPackages: {
+    label: 'Python Packages',
+    filename: 'Topic-23.pptx',
+    url: `${baseUrl}materials/Slides/Topic-23.pptx`,
+  },
+  numpyAndPandas: {
+    label: 'Numpy and Pandas',
+    filename: 'Topic-24.pptx',
+    url: `${baseUrl}materials/Slides/Topic-24.pptx`,
+  },
+  pandas: {
+    label: 'Pandas in Python',
+    filename: 'Topic-25.pptx',
+    url: `${baseUrl}materials/Slides/Topic-25.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -478,7 +503,7 @@ export const schedule = [
           {
             label: 'Topic 17 Slides (Functions)',
             type: 'ppt',
-            url: materials.functionalProgramming.url,
+            url: materials.functions.url,
             download: materials.functions.filename,
           },
           {
@@ -508,6 +533,58 @@ export const schedule = [
           },
           {
             label: 'Week 7 Lab Task released',
+            type: 'assignment',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    week: 8,
+    entries: [
+      {
+        date: 'Sep 22',
+        description: 'Itertools, Modules & Packages, Python Packages, Numpy & Pandas',
+        materials: [
+          {
+            label: 'Topic 21 Slides (Itertools)',
+            type: 'ppt',
+            url: materials.itertools.url,
+            download: materials.itertools.filename,
+          },
+          {
+            label: 'Topic 22 Slides (Modules & Packages)',
+            type: 'ppt',
+            url: materials.modulesAndPackages.url,
+            download: materials.modulesAndPackages.filename,
+          },
+          {
+            label: 'Topic 23 Slides (Python Packages)',
+            type: 'ppt',
+            url: materials.pythonPackages.url,
+            download: materials.pythonPackages.filename,
+          },
+          {
+            label: 'Topic 24 Slides (Numpy & Pandas)',
+            type: 'ppt',
+            url: materials.numpyAndPandas.url,
+            download: materials.numpyAndPandas.filename,
+          },
+          {
+            label: 'Topic 25 Slides (Pandas)',
+            type: 'ppt',
+            url: materials.pandas.url,
+            download: materials.pandas.filename,
+          },
+        ],
+        events: [],
+        deadlines: [
+          {
+            label: 'Week 7 Lab Task due',
+            type: 'assignment',
+          },
+          {
+            label: 'Python Capstone Project released',
             type: 'assignment',
           },
         ],
@@ -811,6 +888,54 @@ export const lectures = [
       { label: 'Topic 12: Tuples (PPTX)', url: materials.Tuples.url, format: 'pptx', download: materials.Tuples.filename },
       { label: 'Topic 13: Dictionaries (PPTX)', url: materials.Dictionaries.url, format: 'pptx', download: materials.Dictionaries.filename },
       { label: 'List Jupyter Notebook', url: materials.listNotebook.url, format: 'colab' },
+    ],
+    notes: [],
+    video: null,
+  },
+  {
+    week: 5,
+    title: 'Strings & String Manipulation',
+    date: 'Sep 1',
+    slides: [
+      { label: 'Topic 14: Strings (PPTX)', url: materials.Strings.url, format: 'pptx', download: materials.Strings.filename },
+      { label: 'Topic 15: String Operations (PPTX)', url: materials.StringOperations.url, format: 'pptx', download: materials.StringOperations.filename },
+    ],
+    notes: [],
+    video: null,
+  },
+  {
+    week: 6,
+    title: 'Regular Expressions (re Module)',
+    date: 'Sep 8',
+    slides: [
+      { label: 'Topic 16: Regular Expressions (PPTX)', url: materials.RegularExpressions.url, format: 'pptx', download: materials.RegularExpressions.filename },
+    ],
+    notes: [],
+    video: null,
+  },
+  {
+    week: 7,
+    title: 'Functions, Recursion, Lambda Expressions & Functional Programming',
+    date: 'Sep 15',
+    slides: [
+      { label: 'Topic 17: Functions (PPTX)', url: materials.functions.url, format: 'pptx', download: materials.functions.filename },
+      { label: 'Topic 18: Recursive Functions (PPTX)', url: materials.recursiveFunctions.url, format: 'pptx', download: materials.recursiveFunctions.filename },
+      { label: 'Topic 19: Lambda Expressions (PPTX)', url: materials.lambdaExpressions.url, format: 'pptx', download: materials.lambdaExpressions.filename },
+      { label: 'Topic 20: Functional Programming (PPTX)', url: materials.functionalProgramming.url, format: 'pptx', download: materials.functionalProgramming.filename },
+    ],
+    notes: [],
+    video: null,
+  },
+  {
+    week: 8,
+    title: 'Itertools, Modules, Packages, Numpy & Pandas',
+    date: 'Sep 22',
+    slides: [
+      { label: 'Topic 21: Itertools in Python (PPTX)', url: materials.itertools.url, format: 'pptx', download: materials.itertools.filename },
+      { label: 'Topic 22: Modules and Packages (PPTX)', url: materials.modulesAndPackages.url, format: 'pptx', download: materials.modulesAndPackages.filename },
+      { label: 'Topic 23: Python Packages (PPTX)', url: materials.pythonPackages.url, format: 'pptx', download: materials.pythonPackages.filename },
+      { label: 'Topic 24: Numpy and Pandas (PPTX)', url: materials.numpyAndPandas.url, format: 'pptx', download: materials.numpyAndPandas.filename },
+      { label: 'Topic 25: Pandas in Python (PPTX)', url: materials.pandas.url, format: 'pptx', download: materials.pandas.filename },
     ],
     notes: [],
     video: null,

@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap'
 import ScheduleTable from '../components/ScheduleTable'
+import { materials } from '../data/courseData'
 
 export default function Schedule() {
   return (
@@ -17,10 +18,11 @@ export default function Schedule() {
       <section className="content-section">
         <Container>
           <div className="mb-4">
-            <span className="material-link me-2"><a href="/materials/Slides/Topic-17.pptx" target="_blank">Topic 17 Slides</a></span>
-            <span className="material-link me-2"><a href="/materials/Slides/Topic-18.pptx" target="_blank">Topic 18 Slides</a></span>
-            <span className="material-link me-2"><a href="/materials/Slides/Topic-19.pptx" target="_blank">Topic 19 Slides</a></span>
-            <span className="material-link me-2"><a href="/materials/Slides/Topic-20.pptx" target="_blank">Topic 20 Slides</a></span>
+            <span className="material-link me-2"><a href={materials.itertools.url} target="_blank" rel="noopener noreferrer" download={materials.itertools.filename}>Topic 21 Slides</a></span>
+            <span className="material-link me-2"><a href={materials.modulesAndPackages.url} target="_blank" rel="noopener noreferrer" download={materials.modulesAndPackages.filename}>Topic 22 Slides</a></span>
+            <span className="material-link me-2"><a href={materials.pythonPackages.url} target="_blank" rel="noopener noreferrer" download={materials.pythonPackages.filename}>Topic 23 Slides</a></span>
+            <span className="material-link me-2"><a href={materials.numpyAndPandas.url} target="_blank" rel="noopener noreferrer" download={materials.numpyAndPandas.filename}>Topic 24 Slides</a></span>
+            <span className="material-link me-2"><a href={materials.pandas.url} target="_blank" rel="noopener noreferrer" download={materials.pandas.filename}>Topic 25 Slides</a></span>
             <span className="material-link me-2">[notes]</span>
           </div>
           <ScheduleTable />
