@@ -127,6 +127,31 @@ export const materials = {
     filename: 'Topic-25.pptx',
     url: `${baseUrl}materials/Slides/Topic-25.pptx`,
   },
+  classesAndObjects: {
+    label: 'Classes and Objects',
+    filename: 'Topic-26.pptx',
+    url: `${baseUrl}materials/Slides/Topic-26.pptx`,
+  },
+  classAttributesAndMethods: {
+    label: 'Class Attributes and Methods',
+    filename: 'Topic-27.pptx',
+    url: `${baseUrl}materials/Slides/Topic-27.pptx`,
+  },
+  constructorAndSelf: {
+    label: 'Constructor and Self',
+    filename: 'Topic-28.pptx',
+    url: `${baseUrl}materials/Slides/Topic-28.pptx`,
+  },
+inheritanceAndmethodOverriding: {
+    label: 'Inheritance and Method Overriding',
+    filename: 'Topic-29.pptx',
+    url: `${baseUrl}materials/Slides/Topic-29.pptx`,
+  },
+  fileHandling: {
+    label: 'File Handling',
+    filename: 'Topic-30.pptx',  
+  url: `${baseUrl}materials/Slides/Topic-30.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -591,6 +616,49 @@ export const schedule = [
       },
     ],
   },
+  {
+    week: 9,
+    entries: [
+      {
+        date: 'Oct 6',
+        description: 'Object-Oriented Programming: Classes, Attributes, Constructors, Inheritance & File Handling',
+        materials: [
+          {
+            label: 'Topic 26 Slides (Classes and Objects)',
+            type: 'ppt',
+            url: materials.classesAndObjects.url,
+            download: materials.classesAndObjects.filename,
+          },
+          {
+            label: 'Topic 27 Slides (Class Attributes and Methods)',
+            type: 'ppt',
+            url: materials.classAttributesAndMethods.url,
+            download: materials.classAttributesAndMethods.filename,
+          },
+          {
+            label: 'Topic 28 Slides (Constructor and Self)',
+            type: 'ppt',
+            url: materials.constructorAndSelf.url,
+            download: materials.constructorAndSelf.filename,
+          },
+          {
+            label: 'Topic 29 Slides (Inheritance and Method Overriding)',
+            type: 'ppt',
+            url: materials.inheritanceAndmethodOverriding.url,
+            download: materials.inheritanceAndmethodOverriding.filename,
+          },
+          {
+            label: 'Topic 30 Slides (File Handling)',
+            type: 'ppt',
+            url: materials.fileHandling.url,
+            download: materials.fileHandling.filename,
+          },
+        ],
+        events: [],
+        deadlines: [],
+      },
+    ],
+  },
 ]
 
 export const assignments = [
@@ -936,6 +1004,20 @@ export const lectures = [
       { label: 'Topic 23: Python Packages (PPTX)', url: materials.pythonPackages.url, format: 'pptx', download: materials.pythonPackages.filename },
       { label: 'Topic 24: Numpy and Pandas (PPTX)', url: materials.numpyAndPandas.url, format: 'pptx', download: materials.numpyAndPandas.filename },
       { label: 'Topic 25: Pandas in Python (PPTX)', url: materials.pandas.url, format: 'pptx', download: materials.pandas.filename },
+    ],
+    notes: [],
+    video: null,
+  },
+  {
+    week: 9,
+    title: 'OOP: Classes, Attributes, Constructor, Inheritance & File Handling',
+    date: 'Oct 6',
+    slides: [
+      { label: 'Topic 26: Classes and Objects (PPTX)', url: materials.classesAndObjects.url, format: 'pptx', download: materials.classesAndObjects.filename },
+      { label: 'Topic 27: Class Attributes and Methods (PPTX)', url: materials.classAttributesAndMethods.url, format: 'pptx', download: materials.classAttributesAndMethods.filename },
+      { label: 'Topic 28: Constructor and Self (PPTX)', url: materials.constructorAndSelf.url, format: 'pptx', download: materials.constructorAndSelf.filename },
+      { label: 'Topic 29: Inheritance and Method Overriding (PPTX)', url: materials.inheritanceAndmethodOverriding.url, format: 'pptx', download: materials.inheritanceAndmethodOverriding.filename },
+      { label: 'Topic 30: File Handling (PPTX)', url: materials.fileHandling.url, format: 'pptx', download: materials.fileHandling.filename },
     ],
     notes: [],
     video: null,
