@@ -152,6 +152,16 @@ inheritanceAndmethodOverriding: {
     filename: 'Topic-30.pptx',  
   url: `${baseUrl}materials/Slides/Topic-30.pptx`,
   },
+  exceptionHanling: {
+    label: 'Exception Handling',
+    filename: 'Topic-31.pptx',
+    url: `${baseUrl}materials/Slides/Topic-31.pptx`,
+  },
+  innerclasses: {
+    label: 'Inner Classes',
+    filename: 'Topic-32.pptx',
+    url: `${baseUrl}materials/Slides/Topic-32.pptx`,
+  },
   pythonLabTaskGitHubVSCode: {
     label: 'Python Lab Task: Git, GitHub & VS Code',
     filename: 'Python_Lab_Task_Git_GitHub_VSCode.pdf',
@@ -659,8 +669,32 @@ export const schedule = [
       },
     ],
   },
+  {
+    week: 10,
+    entries: [
+      {
+        date: 'Nov 3',
+        description: 'Exception Handling & Inner Classes',
+        materials: [
+          {
+            label: 'Topic 31 Slides (Exception Handling)',
+            type: 'ppt',
+            url: materials.exceptionHanling.url,
+            download: materials.exceptionHanling.filename,
+          },
+          {
+            label: 'Topic 32 Slides (Inner Classes)',
+            type: 'ppt',
+            url: materials.innerclasses.url,
+            download: materials.innerclasses.filename,
+          },
+        ],
+        events: [],
+        deadlines: [],
+      },
+    ],
+  },
 ]
-
 export const assignments = [
   {
     id: 'pa0',
@@ -1018,6 +1052,17 @@ export const lectures = [
       { label: 'Topic 28: Constructor and Self (PPTX)', url: materials.constructorAndSelf.url, format: 'pptx', download: materials.constructorAndSelf.filename },
       { label: 'Topic 29: Inheritance and Method Overriding (PPTX)', url: materials.inheritanceAndmethodOverriding.url, format: 'pptx', download: materials.inheritanceAndmethodOverriding.filename },
       { label: 'Topic 30: File Handling (PPTX)', url: materials.fileHandling.url, format: 'pptx', download: materials.fileHandling.filename },
+    ],
+    notes: [],
+    video: null,
+  },
+  {
+    week: 10,
+    title: 'Exception Handling & Inner Classes',
+    date: 'Nov 3',
+    slides: [
+      { label: 'Topic 31: Exception Handling (PPTX)', url: materials.exceptionHanling.url, format: 'pptx', download: materials.exceptionHanling.filename },
+      { label: 'Topic 32: Inner Classes (PPTX)', url: materials.innerclasses.url, format: 'pptx', download: materials.innerclasses.filename },
     ],
     notes: [],
     video: null,
